@@ -7,11 +7,13 @@ Created on Thu Mar  9 16:13:05 2017
 
 def attack(A,B):
     print("{} attacks!".format(A[7]))
-    NHP = B[0]
-    WeaponA = A[8]
-    attackA = A[1]+WeaponA[0]-B[5]
-    hitA = A[2]*2 + A[4]/2 +WeaponA[1]- B[3]*2 + B[4]
-    critA = WeaponA[3]+A[2]/2- B[4]
+    NHP = B["HP"]
+    WeaponA = A["Weapon"]
+    attackA = A["Atk"]+WeaponA["Mgt"]-B["Def"]
+    hitA = A["Skl"]*2 + A["Lck"]/2 +WeaponA["Acc"]- B["Spd"]*2 + B["Lck"]
+    if hitA > 100:
+        hitA = 100
+    critA = WeaponA["Crit"]+A["Skl"]/2- B["Lck"]
     print("Hit={0} Dmg={1} Crit={2}".format(hitA,attackA,critA))
     import random
     truehit = (random.randint(1,100) + random.randint(1,100))/2
@@ -51,19 +53,19 @@ Borin = [50,18,10,11,8,13,10,"Borin",Poleaxe]
 def Turno(Agnes,Borin):
     import time
     while True:
-        Borin[0] = attack(Agnes,Borin)
-        if Borin[0] <= 0:
+        Borin["HP"] = attack(Agnes,Borin)
+        if Borin["HP"] <= 0:
             break
         time.sleep(2) # delays for 2 seconds
-        Agnes[0] = attack(Borin,Agnes)
-        if Agnes[0] <= 0:
+        Agnes["HP"] = attack(Borin,Agnes)
+        if Agnes["HP"] <= 0:
             break
         time.sleep(2) # delays for 2 seconds
-        if Agnes[3]-Agnes[8][2] -(Borin[3] - Borin[8][2]) >= 3:
-            Borin[0] = attack(Agnes,Borin)
-        elif Borin[3]-Borin[8][2] - (Agnes[3] - Agnes[8][2]) >= 3:
-            Agnes[0] = attack(Borin,Agnes)    
+        if Agnes["Spd"]-Agnes[8][2] -(Borin[3] - Borin[8][2]) >= 3:
+            Borin["HP"] = attack(Agnes,Borin)
+        elif Borin["Spd"]-Borin[8][2] - (Agnes[3] - Agnes[8][2]) >= 3:
+            Agnes["HP"] = attack(Borin,Agnes)    
         break
-    return Agnes[0],Borin[0]
+    return Agnes["HP"],Borin["HP"]
 
 Turno(Agnes,Borin)
