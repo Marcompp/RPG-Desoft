@@ -6,6 +6,7 @@ Created on Fri Mar 31 10:49:03 2017
 """
 
 import json
+import Batalha as blt
 
 def mostra(b):
     for c in b:
@@ -22,9 +23,8 @@ for b in Char:
 Agnes = Char["Agnes"]
 Borin = Char["Borin"]
 
-Weapons= {"Broadsword":{"Mgt":11,"Acc":65,"Wgt":10,"Crit":5},"Poleaxe":{"Mgt":11,"Acc":65,"Wgt":10,"Crit":5}}
+Weapons= {"Broadsword":{"mgt":11,"acc":65,"wgt":10,"crit":5},"Poleaxe":{"mgt":11,"acc":65,"wgt":10,"crit":5}}
 Agnes["Weapon"]= Weapons["Broadsword"]
 Borin["Weapon"]=Weapons["Poleaxe"]
 
-import Batalha.py as blt
-blt.turno(Agnes,Borin)
+blt.Turno(Agnes,Borin)
