@@ -1,0 +1,4 @@
+git add "arquivo"
+git commit -m"Mensagem"
+git push - Coloca arquivo online no git
+git pull - Atualiza seu pc com os arquivos no git
