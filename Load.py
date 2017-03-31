@@ -13,8 +13,18 @@ def mostra(b):
 
 
 with open ("Chars.json") as chars:
-    Agn = json.load(chars)
+    Char = json.load(chars)
     
-for b in Agn:
+for b in Char:
     #print(b)
-    mostra(Agn[b])
+    mostra(Char[b])
+    
+Agnes = Char["Agnes"]
+Borin = Char["Borin"]
+
+Weapons= {"Broadsword":{"Mgt":11,"Acc":65,"Wgt":10,"Crit":5},"Poleaxe":{"Mgt":11,"Acc":65,"Wgt":10,"Crit":5}}
+Agnes["Weapon"]= Weapons["Broadsword"]
+Borin["Weapon"]=Weapons["Poleaxe"]
+
+import Batalha.py as blt
+blt.turno(Agnes,Borin)
