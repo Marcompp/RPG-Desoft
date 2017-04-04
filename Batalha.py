@@ -8,11 +8,13 @@ Created on Thu Mar  9 16:13:05 2017
 def attack(A,B):
     print("{} attacks!".format(A["nome"]))
     NHP = B["HP"]
-    WeaponA = A["Weapon"]
+    WeaponA = A["Attack"]
     attackA = A["atk"]+WeaponA["mgt"]-B["def"]
     hitA = A["skl"]*2 + A["lck"]/2 +WeaponA["acc"]- B["spd"]*2 + B["lck"]
     if hitA > 100:
         hitA = 100
+    if attackA < 0:
+        attackA = 0
     critA = WeaponA["crit"]+A["skl"]/2- B["lck"]
     print("Hit={0} Dmg={1} Crit={2}".format(hitA,attackA,critA))
     import random
@@ -69,3 +71,44 @@ def Turno(Agnes,Borin):
     return Agnes["HP"],Borin["HP"]
 
 #Turno(Agnes,Borin)
+import time
+
+def Comando(Agnes,Borin):
+    while Agnes["HP"] > 0 and Borin["HP"] > 0:
+        print("{0} has {1} HP.".format(Agnes["nome"],Agnes["HP"]))
+        print("{0} has {1} HP.".format(Borin["nome"],Borin["HP"]))
+        options = ["-Fight","-Item","-Run"]
+        command="aaaa"
+        while command not in options:
+            print("What will you do?")
+            for n in options:
+                time.sleep(0.5)
+                print(n)
+            command = input()
+        if command == options[0]:
+            move = "lafgaag"
+            attack = ["Attack"]
+            for b in Agnes["Techs"]:
+                attack.append(b)
+            while move in attack:
+                print("What attack will you use?")
+                time.sleep(0.5)
+                print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4}".format(Agnes["Weapon"]["mgt"],Agnes["Weapon"]["acc"],Agnes["Weapon"]["wgt"],Agnes["Weapon"]["crit"],Agnes["Weapon"]["effect"]))
+                for a in Agnes["Techs"]:
+                    time.sleep(0.5)
+                    print("-{0} (Mgt={1} Acc={2} Wgt={3} Crit={4})".format(Agnes["Techs"][a]["name"],Agnes["Techs"][a]["mgt"],Agnes["Techs"][a]["acc"],Agnes["Techs"][a]["wgt"],Agnes["Techs"][a]["crit"],Agnes["Techs"][a]["effect"]))
+                print("-Cancel")
+                move = input()
+            if move == "Cancel":
+                continue
+            elif move == "Attack":
+                Agnes["Attack"] = Agnes["Weapon"]
+                Turno(Agnes,Borin)
+            else:
+                Agnes["Attack"] = Agnes["Techs"][move]
+            #calculo quem vai antes
+            Turno(Agnes,Borin)
+        if command == options[1]:
+            #inventorio
+        if command == options[2]:
+            #fugir
