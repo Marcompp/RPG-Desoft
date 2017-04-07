@@ -23,8 +23,8 @@ for b in Char:
 Agnes = Char["Agnes"]
 Borin = Char["Borin"]
 
-Weapons= {"Broadsword":{"mgt":11,"acc":65,"wgt":10,"crit":5},"Poleaxe":{"mgt":11,"acc":65,"wgt":10,"crit":5}}
+Weapons= {"Broadsword":{"mgt":11,"acc":65,"wgt":10,"crit":5,"effect":"none"},"Poleaxe":{"mgt":11,"acc":65,"wgt":10,"crit":5,"effect":"none"}}
 Agnes["Weapon"]= Weapons["Broadsword"]
 Borin["Weapon"]=Weapons["Poleaxe"]
 
-blt.Turno(Agnes,Borin)
+blt.Comando(Agnes,Borin)
