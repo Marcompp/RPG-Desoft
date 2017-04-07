@@ -4,6 +4,7 @@ Created on Thu Mar  9 16:13:05 2017
 
 @author: marco
 """
+import random
 
 def attack(A,B):
     print("{} attacks!".format(A["nome"]))
@@ -17,7 +18,6 @@ def attack(A,B):
         attackA = 0
     critA = WeaponA["crit"]+A["skl"]/2- B["lck"]
     print("Hit={0} Dmg={1} Crit={2}".format(hitA,attackA,critA))
-    import random
     truehit = (random.randint(1,100) + random.randint(1,100))/2
     if truehit <= hitA:
         print("The attack hit! ",end="")
@@ -70,6 +70,24 @@ def Turno(Agnes,Borin):
         break
     return Agnes["HP"],Borin["HP"]
 
+def Fight(Agnes,Borin):
+    #enemy attack
+    alatk=1+len(Borin["Techs"]) 
+    clac= random.randint(1,alatk)
+    if clac == 1:
+        Borin["Attack"] = Borin["Weapon"]
+    else:
+        Borin["Attack"] = Borin["Tech"][clac-1]
+    #who goes first
+    tot = Agnes["lck"]+Borin["lck"]
+    calc = (random.randint(1,tot) + random.randint(1,tot))/2 
+    if Agnes["lck"]>=calc:
+        Turno(Agnes,Borin)
+    else:
+        Turno(Borin,Agnes)
+           
+    
+
 #Turno(Agnes,Borin)
 import time
 
@@ -77,38 +95,40 @@ def Comando(Agnes,Borin):
     while Agnes["HP"] > 0 and Borin["HP"] > 0:
         print("{0} has {1} HP.".format(Agnes["nome"],Agnes["HP"]))
         print("{0} has {1} HP.".format(Borin["nome"],Borin["HP"]))
-        options = ["-Fight","-Item","-Run"]
+        options = ["1)Fight","2)Item","3)Run"]
         command="aaaa"
-        while command not in options:
+        while command not in range(1,4):
             print("What will you do?")
             for n in options:
                 time.sleep(0.5)
                 print(n)
-            command = input()
-        if command == options[0]:
+            command = int(input(""))
+        if command == 1:
             move = "lafgaag"
             attack = ["Attack"]
             for b in Agnes["Techs"]:
                 attack.append(b)
-            while move in attack:
+            while move not in attack:
                 print("What attack will you use?")
                 time.sleep(0.5)
-                print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4}".format(Agnes["Weapon"]["mgt"],Agnes["Weapon"]["acc"],Agnes["Weapon"]["wgt"],Agnes["Weapon"]["crit"],Agnes["Weapon"]["effect"]))
+                print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(Agnes["Weapon"]["mgt"],Agnes["Weapon"]["acc"],Agnes["Weapon"]["wgt"],Agnes["Weapon"]["crit"],Agnes["Weapon"]["effect"]))
                 for a in Agnes["Techs"]:
                     time.sleep(0.5)
                     print("-{0} (Mgt={1} Acc={2} Wgt={3} Crit={4})".format(Agnes["Techs"][a]["name"],Agnes["Techs"][a]["mgt"],Agnes["Techs"][a]["acc"],Agnes["Techs"][a]["wgt"],Agnes["Techs"][a]["crit"],Agnes["Techs"][a]["effect"]))
                 print("-Cancel")
-                move = input()
+                move = input("")
             if move == "Cancel":
                 continue
             elif move == "Attack":
                 Agnes["Attack"] = Agnes["Weapon"]
-                Turno(Agnes,Borin)
             else:
                 Agnes["Attack"] = Agnes["Techs"][move]
             #calculo quem vai antes
-            Turno(Agnes,Borin)
-        if command == options[1]:
+            Fight(Agnes,Borin)
+        if command == 2:
             #inventorio
-        if command == options[2]:
+            pass
+        if command == 3:
             #fugir
+            pass
+            
