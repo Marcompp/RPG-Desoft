@@ -7,17 +7,19 @@
 		"skl" : 40,
 		"spd" : 50,
 		"lck" : 40,
-		"def" : 12
+		"def" : 12,
+		"Techs" : {}
 	},
 	"Borin":{
-		"nome" : "Agnes",
+		"nome" : "Borin",
 		"lvl" : 1,
 		"HP" : 40,
 		"atk" : 30,
 		"skl" : 20,
 		"spd" : 20,
 		"lck" : 20,
-		"def" : 22
+		"def" : 22,
+		"Techs" : {}
 	},
 	"Lala":{
 		"nome" : "Lala",
@@ -27,6 +29,7 @@
 		"skl" : 50,
 		"spd" : 50,
 		"lck" : 30,
-		"def" : 30
+		"def" : 30,
+		"Techs" : {}
 	}
 }
