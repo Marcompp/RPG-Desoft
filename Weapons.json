@@ -1,0 +1,66 @@
+{
+	"Broadsword":{
+		"nome" : "Broadsword"
+		"mgt":11,
+		"acc":65,
+		"wgt":10,
+		"crit":5,
+		"effect":"none"
+	},
+	"Poleaxe":{
+		"nome" : "Poleaxe",
+		"mgt":11,
+		"acc":65,
+		"wgt":10,
+		"crit":5,
+		"effect":"none"
+	},
+	"Slime Spear":{
+		"nome" : "SlimeSpear",
+		"mgt":5,
+		"acc":100,
+		"wgt":6,
+		"crit":0,
+		"effect":"poison"
+	},
+	"Scimitar":{
+		"nome" : "Scimitar",
+		"mgt":16,
+		"acc":50,
+		"wgt":12,
+		"crit":0,
+		"effect":"none"
+	},
+	"Hand Axe":{
+		"nome" : "Hand Axe",
+		"mgt":7,
+		"acc":70,
+		"wgt":6,
+		"crit":0,
+		"effect":"none"
+	},
+	"Iron Claw":{
+		"nome" : "Hand Axe",
+		"mgt":4,
+		"acc":70,
+		"wgt":3,
+		"crit":15,
+		"effect":"none"
+	},
+	"Elven Sword":{
+		"nome" : "Elven Sword",
+		"mgt":8,
+		"acc":90,
+		"wgt":5,
+		"crit":5,
+		"effect":"none"
+	},
+	"Thief's Dagger":{
+		"nome" : "Thief's Dagger",
+		"mgt":6,
+		"acc":100,
+		"wgt":2,
+		"crit":5,
+		"effect":"none"
+	}
+}
