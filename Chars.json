@@ -2,7 +2,7 @@
 	"Agnes":{
 		"nome" : "Agnes",
 		"lvl" : 1,
-		"HP" : 20,
+		"HP" : 30,
 		"atk" : 20,
 		"skl" : 40,
 		"spd" : 50,
@@ -32,4 +32,52 @@
 		"def" : 30,
 		"Techs" : {}
 	}
+	"Slime":{
+		"nome" : "Slime",
+		"lvl" : 1,
+		"HP" : 20,
+		"atk" : 5,
+		"skl" : 5,
+		"spd" : 5,
+		"lck" : 5,
+		"def" : 5,
+		"Weapon" : "Slime Spear",
+		"Techs" : {}
+	},
+		"Skeleton":{
+		"nome" : "Skeleton",
+		"lvl" : 2,
+		"HP" : 35,
+		"atk" : 6,
+		"skl" : 4,
+		"spd" : 4,
+		"lck" : 0,
+		"def" : 7,
+		"Weapon" : "Scimitar",
+		"Techs" : {}
+	},
+		"Bandit":{
+		"nome" : "Bandit",
+		"lvl" : 2,
+		"HP" : 40,
+		"atk" : 5,
+		"skl" : 3,
+		"spd" : 6,
+		"lck" : 2,
+		"def" : 2,
+		"Weapon" : "Hand Axe",
+		"Techs" : {}
+	},
+		"Werewolf":{
+		"nome" : "Werewolf",
+		"lvl" : 3,
+		"HP" : 43,
+		"atk" : 8,
+		"skl" : 3,
+		"spd" : 10,
+		"lck" : 1,
+		"def" : 4,
+		"Weapon" : "Iron Claws",
+		"Techs" : {"Bite"}
+	},
 }
