@@ -56,7 +56,7 @@ def Passear(jog,loc,step):
             return 3
         else:
             print("O chefe da área {0} aparece!!".format(loc["boss"]))
-            btl.Comando(jog.Char[loc['boss']])
+            btl.Comando(jog,Char[loc['boss']])
             return 4
     if step == 4:
         print("Você ve a saída na sua frente, siga com sua jornada")
