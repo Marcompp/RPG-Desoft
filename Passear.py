@@ -8,10 +8,16 @@ import random as rd
 import time
 import Batalha as btl
 
+with open ("Chars.json") as chars:
+    Char = json.load(chars)
+    
+with open ("Weapons.json") as wpns:
+    Wpn = json.load(wpns)
+
 def Encount(jog,loc):
     rend = rd.randint(0, len(loc["inimigos"]))
     print("Você foi atacado por {0}!!!".format(loc['inimigos'][rend]))
-    btl.Comando(jog,loc['inimigos'][rend])
+    btl.Comando(jog,Char[loc['inimigos'][rend]])
 
 def Passear(jog,loc,step):
     print("Você está n{0}.".format(loc["nome"]))
@@ -26,7 +32,7 @@ def Passear(jog,loc,step):
             randi = rd.randint(0, len[loc]['treasure'])
             print("Você achou {0}!".format(loc['treasure'][randi]))
     if step == 0:
-        print("Ainda há um grande caminho a percorrer./nVocê anda um pouco em direção a seu próximo objetivo")
+        print("Ainda há um grande caminho a percorrer.\nVocê anda um pouco em direção a seu próximo objetivo")
         step = 1
         return step
     elif step == 1:
@@ -34,6 +40,6 @@ def Passear(jog,loc,step):
         step = 2
         return step
     elif step == 2:
-        print("Já é possivel ver a próxima área, falta pouco para sair desse local!/n Você sente uma presença maligna olhando para você")
+        print("Já é possivel ver a próxima área, falta pouco para sair desse local!!\n Você sente uma presença maligna olhando para você")
         step = 3
         return step
