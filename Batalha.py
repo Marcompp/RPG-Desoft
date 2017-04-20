@@ -5,6 +5,12 @@ Created on Thu Mar  9 16:13:05 2017
 @author: marco
 """
 import random
+import os
+import json
+
+
+with open ("Weapons.json") as wpns:
+    Wpn = json.load(wpns)
 
 def attack(A,B):
     print("{} attacks!".format(A["nome"]))
@@ -67,6 +73,7 @@ def Turno(Agnes,Borin):
             Borin["HP"] = attack(Agnes,Borin)
         elif Borin["spd"]-Borin["Weapon"]["wgt"] - (Agnes["spd"] - Agnes["Weapon"]["wgt"]) >= 3:
             Agnes["HP"] = attack(Borin,Agnes)    
+        time.sleep(2) # delays for 2 seconds
         break
     return Agnes["HP"],Borin["HP"]
 
@@ -92,7 +99,9 @@ def Fight(Agnes,Borin):
 import time
 
 def Comando(Agnes,Borin):
+    Borin["Weapon"] = Wpn[Borin["Weapon"]]
     while Agnes["HP"] > 0 and Borin["HP"] > 0:
+        os.system("cls")#ClearScreen
         print("{0} has {1} HP.".format(Agnes["nome"],Agnes["HP"]))
         print("{0} has {1} HP.".format(Borin["nome"],Borin["HP"]))
         options = ["1)Fight","2)Item","3)Run"]
@@ -109,6 +118,7 @@ def Comando(Agnes,Borin):
             for b in Agnes["Techs"]:
                 attack.append(b)
             while move not in attack:
+                os.system("cls")#ClearScreen
                 print("What attack will you use?")
                 time.sleep(0.5)
                 print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(Agnes["Weapon"]["mgt"],Agnes["Weapon"]["acc"],Agnes["Weapon"]["wgt"],Agnes["Weapon"]["crit"],Agnes["Weapon"]["effect"]))
