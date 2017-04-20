@@ -31,7 +31,7 @@
 		"lck" : 30,
 		"def" : 30,
 		"Techs" : {}
-	}
+	},
 	"Slime":{
 		"nome" : "Slime",
 		"lvl" : 1,
@@ -78,6 +78,6 @@
 		"lck" : 1,
 		"def" : 4,
 		"Weapon" : "Iron Claws",
-		"Techs" : {"Bite"}
-	},
+		"Techs" : ["Bite"]
+	}
 }
