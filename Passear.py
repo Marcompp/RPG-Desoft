@@ -7,6 +7,8 @@ Created on Tue Apr 18 13:40:37 2017
 import random as rd
 import time
 import Batalha as btl
+import json
+
 
 with open ("Chars.json") as chars:
     Char = json.load(chars)
