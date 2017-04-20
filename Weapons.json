@@ -16,7 +16,7 @@
 		"effect":"none"
 	},
 	"Slime Spear":{
-		"nome" : "SlimeSpear",
+		"nome" : "Slime Spear",
 		"mgt":5,
 		"acc":100,
 		"wgt":6,
@@ -39,8 +39,8 @@
 		"crit":0,
 		"effect":"none"
 	},
-	"Iron Claw":{
-		"nome" : "Hand Axe",
+	"Iron Claws":{
+		"nome" : "Iron Claws",
 		"mgt":4,
 		"acc":70,
 		"wgt":3,
