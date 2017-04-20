@@ -19,11 +19,16 @@ with open ("Weapons.json") as wpns:
     
 with open ("Locations.json") as loca:
     Loca = json.load(loca)
-    
+
+
+
+
+
+
 player = Char["Agnes"]
 location = Loca["Apple Woods"]
 player["Weapon"] = Wpn["Broadsword"]
-step = 0
+step = 3
 
 #save stuff
 
