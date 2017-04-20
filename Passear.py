@@ -17,7 +17,7 @@ with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
 
 def Encount(jog,loc):
-    rend = rd.randint(0, len(loc["inimigos"]))
+    rend = rd.randint(0, len(loc["inimigos"])-1)
     print("Você foi atacado por {0}!!!".format(loc['inimigos'][rend]))
     btl.Comando(jog,Char[loc['inimigos'][rend]])
 
@@ -31,7 +31,7 @@ def Passear(jog,loc,step):
     elif rand == loc['loot']:
         a = input("Você encontrou um tesouro, deseja abrir?(S ou N?) ")
         if a == 'S':
-            randi = rd.randint(0, len[loc]['treasure'])
+            randi = rd.randint(0, len[loc]['treasure']-1)
             print("Você achou {0}!".format(loc['treasure'][randi]))
     if step == 0:
         print("Ainda há um grande caminho a percorrer.\nVocê anda um pouco em direção a seu próximo objetivo")
