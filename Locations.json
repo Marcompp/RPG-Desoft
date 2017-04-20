@@ -4,6 +4,7 @@
 		"inimigos" : ["Slime","Skeleton","Bandit"],
 		"boss" : "Werewolf",
 		"encounter" : 4,
+		"loot" : 5,
 		"treasure" : ["Elven Sword","Book of Fire"],
 		"events" : ["SwordInStone"]
 	},
@@ -12,6 +13,7 @@
 		"inimigos" : ["Vampire Bat","Lost Spirit","Renegade","Cultist"],
 		"boss" : "Chimera",
 		"encounter" : 7,
+		"loot" : 8,
 		"treasure" : ["Thief's Dagger","Book of Light"],
 		"events" : ["Lost","CultHideout"]
 	}
