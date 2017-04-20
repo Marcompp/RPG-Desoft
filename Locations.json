@@ -1,6 +1,6 @@
 {
 	"Apple Woods":{
-		"nome" : "Apple Woods"
+		"nome" : "Apple Woods",
 		"inimigos" : ["Slime","Skeleton","Bandit"],
 		"boss" : "Werewolf",
 		"encounter" : 4,
