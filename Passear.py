@@ -19,7 +19,9 @@ with open ("Weapons.json") as wpns:
 def Encount(jog,loc):
     rend = rd.randint(0, len(loc["inimigos"])-1)
     print("Você foi atacado por {0}!!!".format(loc['inimigos'][rend]))
+    time.sleep(3)
     btl.Comando(jog,Char[loc['inimigos'][rend]])
+    
 
 def Passear(jog,loc,step):
     print("Você está n{0}.".format(loc["nome"]))
@@ -33,6 +35,8 @@ def Passear(jog,loc,step):
         if a == 'S':
             randi = rd.randint(0, len[loc]['treasure']-1)
             print("Você achou {0}!".format(loc['treasure'][randi]))
+    else:
+        print("Você andou por horas sem achar nada de interesse")
     if step == 0:
         print("Ainda há um grande caminho a percorrer.\nVocê anda um pouco em direção a seu próximo objetivo")
         step = 1
@@ -42,6 +46,6 @@ def Passear(jog,loc,step):
         step = 2
         return step
     elif step == 2:
-        print("Já é possivel ver a próxima área, falta pouco para sair desse local!!\n Você sente uma presença maligna olhando para você")
+        print("Já é possivel ver a próxima área, falta pouco para sair desse local!!\nVocê sente uma presença maligna olhando para você")
         step = 3
         return step
