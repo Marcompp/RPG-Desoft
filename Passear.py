@@ -10,8 +10,7 @@ import Batalha as btl
 import json
 
 
-with open ("Chars.json") as chars:
-    Char = json.load(chars)
+
     
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
@@ -24,6 +23,8 @@ def Encount(jog,loc):
     
 
 def Passear(jog,loc,step):
+    with open ("Chars.json") as chars:
+        Char = json.load(chars)
     if step < 3:
         print("You are currently in {0}.".format(loc["nome"]))
         time.sleep(1.5)
