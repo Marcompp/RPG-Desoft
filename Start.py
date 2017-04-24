@@ -36,7 +36,7 @@ else:
         print("Are yous sure you want to delete your game?(S/N)")
         resp = input("")
         if resp == "S":
-            StartOver()
+            sav.StartOver()
             player = misc.NewGame()
     
 player["HP"] = player["MHP"]
