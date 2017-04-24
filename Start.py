@@ -26,7 +26,6 @@ player["Weapon"] = Wpn["Broadsword"]
 step = 0
 
 #save stuff
-
 os.system("cls")#ClearScreen
 print("What will you do?")
 options = ["1)Adventure","2)Train","3)Sleep","4)Bestiary"]
