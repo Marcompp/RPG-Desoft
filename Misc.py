@@ -12,6 +12,9 @@ import time
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
     
+with open ("Chars.json") as char:
+    Char = json.load(char)
+    
 def Equip(jog,weapon):
     print("You've found a {5}! (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(weapon["mgt"],weapon["acc"],weapon["wgt"],weapon["crit"],weapon["effect"],weapon["name"]))
     if weapon["name"] == Wpn[jog["Weapon"]]["name"]:
@@ -26,4 +29,29 @@ def Equip(jog,weapon):
         else:
             print("You kept your current weapon...")
             return jog["Weapon"]
-            
+
+def NewGame():
+    print("Welcome, adventurer, a great quest lies before you!")
+    time.sleep(1)
+    nom=input("But first... Please register your name: ")
+    print("{} is it? A fine name!".format(nom))
+    time.sleep(1)
+    print("Now...")
+    time.sleep(1)
+    print("What class do you wish to be?")
+    start = ["Mage","Knight","Swordsman","Ruffian","Archer","Thief"]
+    sel = "a"
+    while sel not in range(1,len(start)+1):
+        for i in range(len(start)):
+            time.sleep(1)
+            print("{0}) {1}".format(i+1,start[i]))
+        sel = int(input(""))
+    player = Char[start[sel-1]]
+    player["nome"] = nom
+    print("A {}? Fine!".format(player["class"]))
+    time.sleep(1)
+    print("Now, your adventure begins!")
+    time.sleep(2)
+    print("I'll miss you...")
+    os.system("cls")
+    return player
