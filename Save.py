@@ -32,11 +32,13 @@ def StartOver():
     "Start": 0
     }
     Adv = {"loc" : "Apple Woods", "step" : 0}
-            
+    Best = {}
     with open("Player.json", "w") as Arq:
         json.dump(Dic,Arq)
     with open("Adventure.json", "w") as Arq2:
         json.dump(Adv,Arq2)
+    with open("Beast.json", "w") as Arq3:
+        json.dump(Best,Arq3)
 
         
 def SaveAll(PD,BD,ID,AD):
