@@ -7,7 +7,6 @@ Created on Thu Mar  9 16:13:05 2017
 import random
 import os
 import json
-import pygame
 
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
