@@ -8,7 +8,6 @@ import random as rd
 import time
 import Batalha as btl
 import json
-import pygame
 
 
 with open ("Chars.json") as chars:
