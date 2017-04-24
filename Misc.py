@@ -17,8 +17,8 @@ with open ("Chars.json") as char:
     Char = json.load(char)
     
 def Equip(jog,weapon):
-    print("You've found a {5}! (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(weapon["mgt"],weapon["acc"],weapon["wgt"],weapon["crit"],weapon["effect"],weapon["name"]))
-    if weapon["name"] == Wpn[jog["Weapon"]]["name"]:
+    print("You've found a {5}! (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(weapon["mgt"],weapon["acc"],weapon["wgt"],weapon["crit"],weapon["effect"],weapon["nome"]))
+    if weapon["nome"] == Wpn[jog["Weapon"]]["nome"]:
         print("But you're already equiped with one...")
         return jog["Weapon"]
     else:
@@ -26,7 +26,7 @@ def Equip(jog,weapon):
         asw = input("(S or N)")
         if asw.upper() == "S":
             print("You've dropped your current weapon and equiped the {}".format(weapon["name"]))
-            return weapon["name"]
+            return weapon["nome"]
         else:
             print("You kept your current weapon...")
             return jog["Weapon"]
