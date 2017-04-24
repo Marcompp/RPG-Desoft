@@ -73,9 +73,9 @@ def Turno(Agnes,Borin):
         if Agnes["HP"] <= 0:
             break
         time.sleep(2) # delays for 2 seconds
-        if Agnes["spd"]-Agnes["Weapon"]["wgt"] -(Borin["spd"] - Borin["Weapon"]["wgt"]) >= 3:
+        if Agnes["spd"]-Agnes["Wpn"]["wgt"] -(Borin["spd"] - Borin["Wpn"]["wgt"]) >= 3:
             Borin["HP"] = attack(Agnes,Borin)
-        elif Borin["spd"]-Borin["Weapon"]["wgt"] - (Agnes["spd"] - Agnes["Weapon"]["wgt"]) >= 3:
+        elif Borin["spd"]-Borin["Wpn"]["wgt"] - (Agnes["spd"] - Agnes["Wpn"]["wgt"]) >= 3:
             Agnes["HP"] = attack(Borin,Agnes)    
         time.sleep(2) # delays for 2 seconds
         break
