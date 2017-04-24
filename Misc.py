@@ -26,9 +26,11 @@ def Equip(jog,weapon):
         asw = input("(Y or N)")
         if asw.upper() == "Y":
             print("You've dropped your current weapon and equiped the {}".format(weapon["nome"]))
+            time.sleep(2)
             return weapon["nome"]
         else:
             print("You kept your current weapon...")
+            time.sleep(2)
             return jog["Weapon"]
 
 def WeaponDrop(A,B):
