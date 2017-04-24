@@ -9,8 +9,36 @@ import time
 import Batalha as btl
 import json
 
-
-
+def Passar(loc):
+    if loc == "Apple Woods":
+        print("Through an opening amongst the trees, you have arrived at the legendary Caves of Light.")
+        time.sleep(2)
+        return "Caves of Light"
+    elif loc == "Caves of Light":
+        print("After endless venturing through the mazelike caves, /nyou finally arrive at the exit to the Sundown Plateau")
+        time.sleep(2)
+        return "Sundown Plateau"
+    elif loc == "Sundown Plateau":
+        print("On the horizon you spot your next destination, Mt. Legory, and make your way there")
+        time.sleep(2)
+        return "Mt. Legory"
+    elif loc == "Mt. Legory":
+        print("You find an entrance on the cliffside and follow it until you discover the Core Cavern")
+        time.sleep(2)
+        return "Core Cavern"
+    elif loc == "Core Cavern":
+        print("At the exit of the Cavern you find yourself at the Lost Swamp,/n a place few have ever escaped from")
+        time.sleep(2)
+        return "Lost Swamp"
+    elif loc == "Lost Swamp":
+        print("Treading through the accursed swamp, you find your final destination,/n the Arcmat Ruins, said to be the birthplace of all magic")
+        time.sleep(2)
+        return "Arcmat Ruins"
+    elif loc == "Arcmat Ruins":
+        print("After finishing your epic quest,/n you decide to chill and kill monsters and let off some steam at the ARENA!!!")
+        time.sleep(2)
+        return "The Arena"
+        
     
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
