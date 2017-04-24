@@ -32,7 +32,7 @@ else:
     print("1) Continue")
     print("2) Start New Game")
     resp = int(input(""))
-    if resp = 2:
+    if resp == 2:
         print("Are yous sure you want to delete your game?(S/N)")
         resp = int(input(""))
         if resp == "S":
