@@ -8,6 +8,7 @@ import random as rd
 import time
 import Batalha as btl
 import json
+import pygame
 
 
 with open ("Chars.json") as chars:
@@ -18,46 +19,47 @@ with open ("Weapons.json") as wpns:
 
 def Encount(jog,loc):
     rend = rd.randint(0, len(loc["inimigos"])-1)
-    print("Você foi atacado por {0}!!!".format(loc['inimigos'][rend]))
+    print("You were attacked by {0}!!!".format(loc['inimigos'][rend]))
     time.sleep(3)
-    btl.Comando(jog,Char[loc['inimigos'][rend]])
+    btl.Begin(jog,Char[loc['inimigos'][rend]])
     
 
 def Passear(jog,loc,step):
     if step < 3:
-        print("Você está n{0}.".format(loc["nome"]))
+        print("You are currently in {0}.".format(loc["nome"]))
         time.sleep(1.5)
         rand = rd.randint(0, 10)
         if rand <= loc["encounter"]:
             Encount(jog,loc)
             step+=1
         elif rand == loc['loot']:
-            a = input("Você encontrou um tesouro, deseja abrir?(S ou N?) ")
+            a = input("You found a treasure chest, do you wish to open it?(S ou N?) ")
             if a == 'S':
                 randi = rd.randint(0, len[loc]['treasure']-1)
-                print("Você achou {0}!".format(loc['treasure'][randi]))
+                print("You found {0}!".format(loc['treasure'][randi]))
         else:
-            print("Você andou por horas sem achar nada de interesse")
+            print("You walked for hours with nothing to show for.")
         if step == 0:
-            print("Ainda há um grande caminho a percorrer.\nVocê anda um pouco em direção a seu próximo objetivo")
+            print("There is still a long path ahead of you.\nYou walk forwards to your objective.")
             step = 1
             return step
         elif step == 1:
-            print("Você sente já estar no meio do caminho, com isso em mente você continua seu caminho sossegado")
+            print("You feel you are halfway there, you continue following the path at ease.")
             step = 2
             return step
         elif step == 2:
-            print("Já é possivel ver a próxima área, falta pouco para sair desse local!!\nVocê sente uma presença maligna olhando para você")
+            print("You can already see the next area, the exit is only a small journey away!!\nYou feel an evil presence watching you...")
             step = 3
             return step
     else:
-        CT = input("Você preve uma grande luta a frente. Deseja realmente ir a frente?(S ou N) ")
-        if CT == "N":
+        CT = input("You foresee a big battle ahead. Do you really wish to proceed? (Y or N) ")
+        if CT.upper() == "N":
             return 3
         else:
-            print("O chefe da área {0} aparece!!".format(loc["boss"]))
-            btl.Comando(jog,Char[loc['boss']])
+            print("The big boss appears, {0} attacks!!".format(loc["boss"]))
+            time.sleep(3)
+            btl.Begin(jog,Char[loc['boss']])
             return 4
     if step == 4:
-        print("Você ve a saída na sua frente, siga com sua jornada")
+        print("You see the exit right in front of you, so you carry on.")
         
