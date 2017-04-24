@@ -31,8 +31,12 @@ def StartOver():
     Dic = {
     "Start": 0
     }
+    Adv = {"loc" : "Apple Woods", "step" : 0}
+            
     with open("Player.json", "w") as Arq:
         json.dump(Dic,Arq)
+    with open("Adventure.json", "w") as Arq2:
+        json.dump(Adv,Arq2)
 
         
 def SaveAll(PD,BD,ID,AD):
@@ -72,6 +76,7 @@ def Escape(P):
     if a<P["spd"]:
         Boo = True
     return Boo
+
     
 
 
