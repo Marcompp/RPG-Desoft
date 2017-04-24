@@ -65,6 +65,13 @@ def LvlUp(P):
             print("{0} went up by 1!".format((Stats[a])))
     time.sleep(1)
     return P
+
+def Escape(P):
+    a = rd.randint(0, 20)
+    print("You try to escape!")
+    if a<P["spd"]:
+        Boo = True
+    return Boo
     
 
 
