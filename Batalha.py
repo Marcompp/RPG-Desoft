@@ -86,7 +86,7 @@ def Fight(Agnes,Borin):
     alatk=len(Borin["Techs"]) 
     clac= random.randint(0,alatk)
     if clac == 0:
-        Borin["Attack"] = Borin["Weapon"]
+        Borin["Attack"] = Borin["Wpn"]
     else:
         Borin["Attack"] = Tech[Borin["Techs"][clac-1]]
     #who goes first
@@ -103,8 +103,8 @@ def Fight(Agnes,Borin):
 import time
 
 def Comando(Agnes,Borin):
-    Agnes["Weapon"] = Wpn[Agnes["Weapon"]]
-    Borin["Weapon"] = Wpn[Borin["Weapon"]]
+    Agnes["Wpn"] = Wpn[Agnes["Weapon"]]
+    Borin["Wpn"] = Wpn[Borin["Weapon"]]
     while Agnes["HP"] > 0 and Borin["HP"] > 0:
         os.system("cls")#ClearScreen
         print("{0} has {1} HP.".format(Agnes["nome"],Agnes["HP"]))
@@ -126,7 +126,7 @@ def Comando(Agnes,Borin):
                 os.system("cls")#ClearScreen
                 print("What attack will you use?")
                 time.sleep(0.5)
-                print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(Agnes["Weapon"]["mgt"],Agnes["Weapon"]["acc"],Agnes["Weapon"]["wgt"],Agnes["Weapon"]["crit"],Agnes["Weapon"]["effect"]))
+                print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(Agnes["Wpn"]["mgt"],Agnes["Wpn"]["acc"],Agnes["Wpn"]["wgt"],Agnes["Wpn"]["crit"],Agnes["Wpn"]["effect"]))
                 for a in range(0,len(Agnes["Techs"])):
                     time.sleep(0.5)
                     print("-{0} (Mgt={1} Acc={2} Wgt={3} Crit={4})".format(Tech[Agnes["Techs"][a]]["nome"],Tech[Agnes["Techs"][a]]["mgt"],Tech[Agnes["Techs"][a]]["acc"],Tech[Agnes["Techs"][a]]["wgt"],Tech[Agnes["Techs"][a]]["crit"],Tech[Agnes["Techs"][a]]["effect"]))
@@ -135,7 +135,7 @@ def Comando(Agnes,Borin):
             if move == "Cancel":
                 continue
             elif move == "Attack":
-                Agnes["Attack"] = Agnes["Weapon"]
+                Agnes["Attack"] = Agnes["Wpn"]
             else:
                 Agnes["Attack"] = Tech[move]
             #calculo quem vai antes
