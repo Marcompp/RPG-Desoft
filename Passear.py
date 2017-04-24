@@ -18,8 +18,8 @@ with open ("Weapons.json") as wpns:
 
 def Encount(jog,loc):
     rend = rd.randint(0, len(loc["inimigos"])-1)
-    print("You were attacked by {0}!!!".format(loc['inimigos'][rend]))
-    time.sleep(3)
+    print("You found a {0}!".format(loc['inimigos'][rend]))
+    time.sleep(2)
     btl.Begin(jog,Char[loc['inimigos'][rend]])
     
 
@@ -32,22 +32,27 @@ def Passear(jog,loc,step):
             Encount(jog,loc)
             step+=1
         elif rand == loc['loot']:
-            a = input("You found a treasure chest, do you wish to open it?(S ou N?) ")
-            if a == 'S':
+            a = input("You found a treasure chest, do you wish to open it?(Y ou N?) ")
+            if a == 'Y':
                 randi = rd.randint(0, len[loc]['treasure']-1)
                 print("You found {0}!".format(loc['treasure'][randi]))
+                time.sleep(1)
         else:
             print("You walked for hours with nothing to show for.")
+            time.sleep(1)
         if step == 0:
             print("There is still a long path ahead of you.\nYou walk forwards to your objective.")
+            time.sleep(1)
             step = 1
             return step
         elif step == 1:
             print("You feel you are halfway there, you continue following the path at ease.")
+            time.sleep(1)
             step = 2
             return step
         elif step == 2:
             print("You can already see the next area, the exit is only a small journey away!!\nYou feel an evil presence watching you...")
+            time.sleep(1)
             step = 3
             return step
     else:
@@ -55,10 +60,11 @@ def Passear(jog,loc,step):
         if CT.upper() == "N":
             return 3
         else:
-            print("The big boss appears, {0} attacks!!".format(loc["boss"]))
+            print("The big boss appears, {0} is in front of you.".format(loc["boss"]))
             time.sleep(3)
             btl.Begin(jog,Char[loc['boss']])
             return 4
     if step == 4:
         print("You see the exit right in front of you, so you carry on.")
+        time.sleep(2)
         
