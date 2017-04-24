@@ -79,12 +79,12 @@ def Turno(Agnes,Borin):
 
 def Fight(Agnes,Borin):
     #enemy attack
-    alatk=1+len(Borin["Techs"]) 
-    clac= random.randint(1,alatk)
-    if clac == 1:
+    alatk=len(Borin["Techs"]) 
+    clac= random.randint(0,alatk)
+    if clac == 0:
         Borin["Attack"] = Borin["Weapon"]
     else:
-        Borin["Attack"] = Borin["Tech"][clac-1]
+        Borin["Attack"] = Borin["Techs"][clac-1]
     #who goes first
     tot = Agnes["lck"]+Borin["lck"]
     calc = (random.randint(1,tot) + random.randint(1,tot))/2 
@@ -141,4 +141,3 @@ def Comando(Agnes,Borin):
         if command == 3:
             #fugir
             pass
-            
