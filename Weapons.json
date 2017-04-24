@@ -24,7 +24,7 @@
 		"effect":"none"
 	},
 	"Iron Lance":{
-		"nome" : "Iron Sword",
+		"nome" : "Iron Lance",
 		"mgt":7,
 		"acc":70,
 		"wgt":8,
@@ -40,7 +40,7 @@
 		"effect":"none"
 	},
 	"Iron Dagger":{
-		"nome" : "Iron Axe",
+		"nome" : "Iron Dagger",
 		"mgt":5,
 		"acc":90,
 		"wgt":4,
