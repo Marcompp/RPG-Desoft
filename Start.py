@@ -46,17 +46,17 @@ location = Loca["Apple Woods"]
 step = 0
 
 #save stuff
-os.system("cls")#ClearScreen
 #print("What will you do?")
 options = ["1)Adventure","2)Train","3)Sleep","4)Bestiary"]
-command="aaaa"
 while True:
+    command="aaaa"
+    os.system("cls")#ClearScreen
     while command not in range(1,5):
         print("What will you do?")
         for n in options:
             time.sleep(0.5)
             print(n)
-            command = int(input(""))
+        command = int(input(""))
     if command == 1:
         step = psa.Passear(player,location,step)
     if command == 2:
