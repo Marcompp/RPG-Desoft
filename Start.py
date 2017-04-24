@@ -20,11 +20,6 @@ with open ("Weapons.json") as wpns:
 with open ("Locations.json") as loca:
     Loca = json.load(loca)
 
-
-
-
-
-
 player = Char["Agnes"]
 location = Loca["Apple Woods"]
 player["Weapon"] = Wpn["Broadsword"]
@@ -32,7 +27,7 @@ step = 3
 
 #save stuff
 os.system("cls")#ClearScreen
-print("What will you do?")
+#print("What will you do?")
 options = ["1)Adventure","2)Train","3)Sleep","4)Bestiary"]
 command="aaaa"
 while command not in range(1,5):
