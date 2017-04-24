@@ -38,6 +38,7 @@ def WeaponDrop(A,B):
     return A
 
 def NewGame():
+    os.system("cls")
     print("Welcome, adventurer, a great quest lies before you!")
     time.sleep(1)
     nom=input("But first... Please register your name: ")
