@@ -145,18 +145,29 @@ def Comando(Agnes,Borin):
             pass
         if command == 3:
             #fugir
+            escape = sav.Escape(Agnes)
+            if escape == True:
+                print("You escaped safely")
+                return Agnes,True
+            else:
+                print("You failed to escape")
+                attack(Borin,Agnes)
             pass
+    return Agnes,False
         
     
 def Begin(Agnes,Borin): 
     print("Suddenly, {} attacks you!".format(Borin["nome"]))
-    Agnes["HP"]=Agnes["MHP"]
-    Agnes = Comando(Agnes,Borin)
+    time.sleep(2)
+    Agnes["HP"],result =Agnes["MHP"]
+    Agnes,escape = Comando(Agnes,Borin)
+    if escape == True:
+        return Agnes
     if Agnes["HP"]>0:
-        Agnes = sav.XPCount(Agnes,Borin)
+        Agnes = sav.XpCount(Agnes,Borin)
         Agnes = misc.WeaponDrop(Agnes,Borin)
         sav.SaveGameP(Agnes)
     else:
         print("YOU LOSE")
         time.sleep(4)
-        sys.exit
+        os.sys.exit
