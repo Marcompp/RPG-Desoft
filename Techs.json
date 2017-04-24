@@ -78,5 +78,53 @@
 		"wgt":8,
 		"crit":0,
 		"effect":"none"
-	}
+	},
+	"Explosion":{
+		"nome" : "Explosion",
+		"mgt":20,
+		"acc":50,
+		"wgt":12,
+		"crit":0,
+		"effect":"none"
+	},
+	"Shield Bash":{
+		"nome" : "Shield Bash",
+		"mgt":5,
+		"acc":70,
+		"wgt":1,
+		"crit":0,
+		"effect":"none"
+	},
+	"Clean Cut":{
+		"nome" : "Clean Cut",
+		"mgt":4,
+		"acc":100,
+		"wgt":5,
+		"crit":100,
+		"effect":"none"
+	},
+	"Assassinate":{
+		"nome" : "Assassinate",
+		"mgt":100,
+		"acc":0,
+		"wgt":13,
+		"crit":20,
+		"effect":"none"
+	},
+	"Deadeye":{
+		"nome" : "Deadeye",
+		"mgt":10,
+		"acc":35,
+		"wgt":12,
+		"crit":100,
+		"effect":"none"
+	},
+		"Poison Spit":{
+		"nome" : "Poison Spit",
+		"mgt":10,
+		"acc":60,
+		"wgt":7,
+		"crit":0,
+		"effect":"poison"
+	},
 }
