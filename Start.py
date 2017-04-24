@@ -25,6 +25,7 @@ with open ("Locations.json") as loca:
 with open ("Player.json") as play:
     player = json.load(play)
 
+       
 if player == {"Start":0}:
     player = misc.NewGame()
 else:
@@ -42,13 +43,19 @@ else:
 player["HP"] = player["MHP"]
 sav.SaveGameP(player)
 
-location = Loca["Apple Woods"]
-step = 0
 
 #save stuff
 #print("What will you do?")
 options = ["1)Adventure","2)Train","3)Sleep","4)Bestiary"]
 while True:
+    with open ("Player.json") as play:
+        player = json.load(play)
+    with open ("Adventure.json") as adv:
+        Adv = json.load(adv)
+    location = Loca[Adv["loc"]]
+    step = Adv["step"]
+    with open ("Beast.json") as bst:
+        Bst = json.load(bst)
     command="aaaa"
     os.system("cls")#ClearScreen
     while command not in range(1,5):
@@ -59,9 +66,22 @@ while True:
         command = int(input(""))
     if command == 1:
         step = psa.Passear(player,location,step)
+        location = location["nome"]
+        if step == 4:
+            location = psa.Passar(location)
+        Adv["loc"] = location
+        Adv["step"] = step
+        sav.SaveGameA(Adv)
     if command == 2:
         psa.Encount(player,location)
     if command == 3:
         adventure = {"loc":location,"step":step}
-        SaveAll(jogador,bestiario,inventario,adventure)
+        sav.SaveAll(jogador,bestiario,inventario,adventure)
         break
+    if command == 4:
+        os.system("cls")
+        print("Enemies fought:")
+        for h in Bst:
+            time.sleep(0.5)
+            print("{0} (Lv: {1}, HP:{2}, Atk:{3}, Skl:{4}, Spd:{5}, Lck:{6}, Def:{7}, Weapon: {8}, Techs: {9})".format(Bst[h]["nome"],Bst[h]["lvl"],Bst[h]["HP"],Bst[h]["atk"],Bst[h]["skl"],Bst[h]["spd"],Bst[h]["lck"],Bst[h]["def"],Bst[h]["Weapon"],Bst[h]["Techs"]))
+        input("")
