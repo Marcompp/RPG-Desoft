@@ -16,6 +16,8 @@ with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
 
 def Encount(jog,loc):
+    with open ("Chars.json") as chars:
+        Char = json.load(chars)
     rend = rd.randint(0, len(loc["inimigos"])-1)
     print("You found a {0}!".format(loc['inimigos'][rend]))
     time.sleep(2)
@@ -23,11 +25,11 @@ def Encount(jog,loc):
     
 
 def Passear(jog,loc,step):
-    with open ("Chars.json") as chars:
-        Char = json.load(chars)
     if step < 3:
         print("You are currently in {0}.".format(loc["nome"]))
-        time.sleep(1.5)
+        time.sleep(2)
+        print("You walk around for a while")
+        time.sleep(2)
         rand = rd.randint(0, 10)
         if rand <= loc["encounter"]:
             Encount(jog,loc)
@@ -38,22 +40,24 @@ def Passear(jog,loc,step):
                 randi = rd.randint(0, len[loc]['treasure']-1)
                 print("You found {0}!".format(loc['treasure'][randi]))
                 time.sleep(1)
+                step += 1
+                return step
         else:
             print("You walked for hours with nothing to show for.")
-            time.sleep(1)
+            time.sleep(2)
         if step == 0:
             print("There is still a long path ahead of you.\nYou walk forwards to your objective.")
-            time.sleep(1)
+            time.sleep(2)
             step = 1
             return step
         elif step == 1:
             print("You feel you are halfway there, you continue following the path at ease.")
-            time.sleep(1)
+            time.sleep(2)
             step = 2
             return step
         elif step == 2:
             print("You can already see the next area, the exit is only a small journey away!!\nYou feel an evil presence watching you...")
-            time.sleep(1)
+            time.sleep(2)
             step = 3
             return step
     else:
