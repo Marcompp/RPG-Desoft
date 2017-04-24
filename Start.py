@@ -43,18 +43,21 @@ player["HP"] = player["MHP"]
 sav.SaveGameP(player)
 
 location = Loca["Apple Woods"]
-step = 3
+step = 0
 
 #save stuff
 os.system("cls")#ClearScreen
 #print("What will you do?")
 options = ["1)Adventure","2)Train","3)Sleep","4)Bestiary"]
 command="aaaa"
-while command not in range(1,5):
-    print("What will you do?")
-    for n in options:
-        time.sleep(0.5)
-        print(n)
-    command = int(input(""))
-if command == 1:
-    step = psa.Passear(player,location,step)
+while True
+    while command not in range(1,5):
+        print("What will you do?")
+        for n in options:
+            time.sleep(0.5)
+            print(n)
+            command = int(input(""))
+    if command == 1:
+        step = psa.Passear(player,location,step)
+    if command == 2:
+        psa.Encount(player,location)
