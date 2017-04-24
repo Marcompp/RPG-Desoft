@@ -47,6 +47,14 @@
 		"crit":5,
 		"effect":"none"
 	},
+	"Iron Bow":{
+		"nome" : "Iron Bow",
+		"mgt":6,
+		"acc":75,
+		"wgt":6,
+		"crit":5,
+		"effect":"none"
+	},
 	"Iron Rod":{
 		"nome" : "Iron Rod",
 		"mgt":10,
