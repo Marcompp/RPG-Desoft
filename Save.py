@@ -25,7 +25,13 @@ def SaveGameA(AD):
     with open("Adventure.json", "w") as Arq:
         json.dump(AdventureData,Arq)
         
-        
+def StartOver():
+    Dic = {
+    "Start": 0
+    }
+    with open("Player.json", "w") as Arq:
+        json.dump(Dic,Arq)
+
         
 def SaveAll(PD,BD,ID,AD):
     SaveGameP(PD)
