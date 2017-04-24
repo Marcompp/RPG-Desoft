@@ -29,8 +29,8 @@ if player == {"Start":0}:
     player = misc.NewGame()
 else:
     print("What would you like to do?")
-    print("1) Continue"
-    print("2) Start New Game
+    print("1) Continue")
+    print("2) Start New Game")
     resp = int(input(""))
     if resp = 2:
         print("Are yous sure you want to delete your game?(S/N)")
