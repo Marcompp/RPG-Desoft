@@ -96,7 +96,7 @@ def Fight(Agnes,Borin):
         Turno(Agnes,Borin)
     else:
         Turno(Borin,Agnes)
-           
+    return Agnes,Borin
     
 
 #Turno(Agnes,Borin)
@@ -139,7 +139,7 @@ def Comando(Agnes,Borin):
             else:
                 Agnes["Attack"] = Tech[move]
             #calculo quem vai antes
-            Fight(Agnes,Borin)
+            Agnes,Borin = Fight(Agnes,Borin)
         if command == 2:
             #inventorio
             pass
