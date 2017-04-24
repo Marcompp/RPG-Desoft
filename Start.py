@@ -50,7 +50,7 @@ os.system("cls")#ClearScreen
 #print("What will you do?")
 options = ["1)Adventure","2)Train","3)Sleep","4)Bestiary"]
 command="aaaa"
-while True
+while True:
     while command not in range(1,5):
         print("What will you do?")
         for n in options:
@@ -61,3 +61,7 @@ while True
         step = psa.Passear(player,location,step)
     if command == 2:
         psa.Encount(player,location)
+    if command == 3:
+        adventure = {"loc":location,"step":step}
+        SaveAll(jogador,bestiario,inventario,adventure)
+        break
