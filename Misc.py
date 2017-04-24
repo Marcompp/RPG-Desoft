@@ -34,7 +34,7 @@ def Equip(jog,weapon):
 def WeaponDrop(A,B):
     rad = random.randint(0,10)
     if rad <= 2:
-        A["Weapon"] = Equip(A,Wpn[B["Weapon"]])
+        A["Weapon"] = Equip(A,B["Weapon"])
     return A
 
 def NewGame():
