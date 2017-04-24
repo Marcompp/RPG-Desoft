@@ -69,6 +69,7 @@ while True:
         location = location["nome"]
         if step == 4:
             location = psa.Passar(location)
+            step = 0
         Adv["loc"] = location
         Adv["step"] = step
         sav.SaveGameA(Adv)
