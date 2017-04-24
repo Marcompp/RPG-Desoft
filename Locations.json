@@ -16,5 +16,50 @@
 		"loot" : 8,
 		"treasure" : ["Thief's Dagger","Book of Light"],
 		"events" : ["Lost","CultHideout"]
+	},
+	"Sundown Plateau":{
+		"nome" : "Sundown Plateau",
+		"inimigos" : ["Hungry Wolf","Zombie"],
+		"boss" : "Necromancer",
+		"encounter" : 6,
+		"loot" : 8,
+		"treasure" : ["Book of Dark"],
+		"events" : ["Graveyard"]
+	},
+	"Mt. Legory":{
+		"nome" : "Mt. Legory",
+		"inimigos" : ["Frost Fairy","Bald Eagle","Pegasus Knight"],
+		"boss" : "Icelady",
+		"encounter" : 5,
+		"loot" : 8,
+		"treasure" : ["Book of Ice","Glaive"],
+		"events" : ["Roc"]
+	},
+		"Core Cavern":{
+		"nome" : "Core Cavern",
+		"inimigos" : ["Wisp","Wyvern","Lizardman","Tarvos"],
+		"boss" : "Infrit",
+		"encounter" : 8,
+		"loot" : 9,
+		"treasure" : ["Book of Earth","Flamesword"],
+		"events" : ["CaveIn"]
+	},
+		"Lost Swamp":{
+		"nome" : "Lost Swamp",
+		"inimigos" : ["Ent","Gorgon","Lost Souls"],
+		"boss" : "King of the Swamp",
+		"encounter" : 7,
+		"loot" : 9,
+		"treasure" : ["Book of Water","Lost Sword"],
+		"events" : ["Lost"]
+	},
+		"Arcmat Ruins":{
+		"nome" : "Arcmat Ruins",
+		"inimigos" : ["Gargoyle","Treasure Hunter","Wizard","Guardian"],
+		"boss" : "Mathemagician",
+		"encounter" : 8,
+		"loot" : 9,
+		"treasure" : ["Relic Sword"],
+		"events" : ["Spring of Lost Knowledge"]
 	}
 }
