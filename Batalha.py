@@ -125,9 +125,9 @@ def Comando(Agnes,Borin):
                 print("What attack will you use?")
                 time.sleep(0.5)
                 print("-Attack (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(Agnes["Weapon"]["mgt"],Agnes["Weapon"]["acc"],Agnes["Weapon"]["wgt"],Agnes["Weapon"]["crit"],Agnes["Weapon"]["effect"]))
-                for a in Agnes["Techs"]:
+                for a in range(0,len(Agnes["Techs"])):
                     time.sleep(0.5)
-                    print("-{0} (Mgt={1} Acc={2} Wgt={3} Crit={4})".format(Agnes["Techs"][a]["name"],Agnes["Techs"][a]["mgt"],Agnes["Techs"][a]["acc"],Agnes["Techs"][a]["wgt"],Agnes["Techs"][a]["crit"],Agnes["Techs"][a]["effect"]))
+                    print("-{0} (Mgt={1} Acc={2} Wgt={3} Crit={4})".format(Tech[Agnes["Techs"][a]]["nome"],Tech[Agnes["Techs"][a]]["mgt"],Tech[Agnes["Techs"][a]]["acc"],Tech[Agnes["Techs"][a]]["wgt"],Tech[Agnes["Techs"][a]]["crit"],Tech[Agnes["Techs"][a]]["effect"]))
                 print("-Cancel")
                 move = input("")
             if move == "Cancel":
@@ -135,7 +135,7 @@ def Comando(Agnes,Borin):
             elif move == "Attack":
                 Agnes["Attack"] = Agnes["Weapon"]
             else:
-                Agnes["Attack"] = Tech[Agnes["Techs"][move]]
+                Agnes["Attack"] = Tech[move]
             #calculo quem vai antes
             Fight(Agnes,Borin)
         if command == 2:
