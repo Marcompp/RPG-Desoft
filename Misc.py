@@ -22,7 +22,7 @@ def Equip(jog,weapon):
         print("But you're already equiped with one...")
         return jog["Weapon"]
     else:
-        print("Do you wish to drop your current weapon? (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(jog["Weapon"]["mgt"],jog["Weapon"]["acc"],jog["Weapon"]["wgt"],jog["Weapon"]["crit"],jog["Weapon"]["effect"]))
+        print("Do you wish to drop your current weapon? (Mgt={0} Acc={1} Wgt={2} Crit={3} Effect={4})".format(Wpn[jog["Weapon"]]["mgt"],Wpn[jog["Weapon"]]["acc"],Wpn[jog["Weapon"]]["wgt"],Wpn[jog["Weapon"]]["crit"],Wpn[jog["Weapon"]]["effect"]))
         asw = input("(S or N)")
         if asw.upper() == "S":
             print("You've dropped your current weapon and equiped the {}".format(weapon["name"]))
