@@ -73,8 +73,8 @@
 	},
 	"Scimitar":{
 		"nome" : "Scimitar",
-		"mgt":16,
-		"acc":50,
+		"mgt":12,
+		"acc":55,
 		"wgt":12,
 		"crit":0,
 		"effect":"none"
