@@ -32,8 +32,7 @@ def SaveAll(PD,BD,ID,AD):
     SaveGameB(BD)
     SaveGameI(ID)
     SaveGameA(AD)
-        
-SaveAll(A,A,A,A)
+
 
 
         
