@@ -7,6 +7,8 @@ Created on Thu Mar  9 16:13:05 2017
 import random
 import os
 import json
+import Save as sav
+import Misc as misc
 
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
@@ -150,4 +152,11 @@ def Begin(Agnes,Borin):
     print("Suddenly, {} attacks you!".format(Borin["nome"]))
     Agnes["HP"]=Agnes["MHP"]
     Agnes = Comando(Agnes,Borin)
-    
+    if Agnes["HP"]>0:
+        Agnes = sav.XPCount(Agnes,Borin)
+        Agnes = misc.WeaponDrop(Agnes,Borin)
+        sav.SaveGameP(Agnes)
+    else:
+        print("YOU LOSE")
+        time.sleep(4)
+        sys.exit

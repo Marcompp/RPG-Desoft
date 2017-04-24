@@ -8,6 +8,7 @@ Created on Thu Apr 20 14:01:58 2017
 import json
 import os
 import time
+import random
 
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
@@ -29,6 +30,12 @@ def Equip(jog,weapon):
         else:
             print("You kept your current weapon...")
             return jog["Weapon"]
+
+def WeaponDrop(A,B):
+    rad = random.randint(0,10)
+    if rad <= 2:
+        A["Weapon"] = Equip(A,Wpn[B["Weapon"]])
+    return A
 
 def NewGame():
     print("Welcome, adventurer, a great quest lies before you!")
