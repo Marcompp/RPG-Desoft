@@ -1,6 +1,6 @@
 {	
 	"Bite":{
-		"nome" : "Bote",
+		"nome" : "Bite",
 		"mgt":10,
 		"acc":50,
 		"wgt":13,
@@ -73,7 +73,7 @@
 	},
 	"Integer":{
 		"nome" : "Integer",
-		"mgt":random.randint(1,30),
+		"mgt":15,
 		"acc":60,
 		"wgt":8,
 		"crit":0,
