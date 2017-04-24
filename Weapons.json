@@ -62,5 +62,245 @@
 		"wgt":2,
 		"crit":5,
 		"effect":"none"
+	},
+	"Bloody Dagger":{
+		"nome" : "Bloody Dagger",
+		"mgt":5,
+		"acc":90,
+		"wgt":2,
+		"crit":30,
+		"effect":"none"
+	},
+	"Spirit Lance":{
+		"nome" : "Spirit Lance",
+		"mgt": 7,
+		"acc": 85,
+		"wgt":5,
+		"crit":5,
+		"effect":"none"
+	},
+	"Machete":{
+		"nome" : "Machete",
+		"mgt": 12,
+		"acc": 60,
+		"wgt":6,
+		"crit":5,
+		"effect":"none"
+	},
+	"Sacrificial Knife":{
+		"nome" : "Sacrificial Knife",
+		"mgt": 7,
+		"acc": 70,
+		"wgt":3,
+		"crit":20,
+		"effect":"none"
+	},
+	"Greataxe":{
+		"nome" : "Greataxe",
+		"mgt": 15,
+		"acc": 60,
+		"wgt":14,
+		"crit":0,
+		"effect":"none"
+	},
+	"Bloody Claws":{
+		"nome" : "Bloody Claws",
+		"mgt":3,
+		"acc":70,
+		"wgt":3,
+		"crit":50,
+		"effect":"none"
+	},
+	"Killer Axe":{
+		"nome" : "Killer Axe",
+		"mgt": 10,
+		"acc": 65,
+		"wgt":9,
+		"crit":30,
+		"effect":"none"
+	},
+	"Skull Staff":{
+		"nome" : "Skull Staff",
+		"mgt": 7,
+		"acc": 90,
+		"wgt":8,
+		"crit":30,
+		"effect":"none"
+	},
+	"Fairy Bow":{
+		"nome" : "Fairy Bow",
+		"mgt": 9,
+		"acc": 70,
+		"wgt":8,
+		"crit":0,
+		"effect":"none"
+	},
+	"Javelin":{
+		"nome" : "Javelin",
+		"mgt": 8,
+		"acc": 80,
+		"wgt":7,
+		"crit":5,
+		"effect":"none"
+	},
+	"Winged Spear":{
+		"nome" : "Winged Spear",
+		"mgt": 11,
+		"acc": 75,
+		"wgt":8,
+		"crit":5,
+		"effect":"none"
+	},
+	"Glaive":{
+		"nome" : "Glaive",
+		"mgt": 13,
+		"acc": 75,
+		"wgt":12,
+		"crit":0,
+		"effect": "none"
+	},
+	"Frost Staff":{
+		"nome" : "Frost Staff",
+		"mgt": 13,
+		"acc": 60,
+		"wgt":8,
+		"crit":5,
+		"effect":"none"
+	},
+	"Fire Staff":{
+		"nome" : "Fire Staff",
+		"mgt": 15,
+		"acc": 50,
+		"wgt":8,
+		"crit":5,
+		"effect":"none"
+	},
+	"Dragon Blade":{
+		"nome" : "Dragon Blade",
+		"mgt": 10,
+		"acc": 60,
+		"wgt":10,
+		"crit":10,
+		"effect":"none"
+	},
+	"Falchion":{
+		"nome" : "Falchion",
+		"mgt": 14,
+		"acc": 60,
+		"wgt":12,
+		"crit":0,
+		"effect":"none"
+	},
+	"Firesword":{
+		"nome" : "Firesword",
+		"mgt": 12,
+		"acc": 90,
+		"wgt":9,
+		"crit":0,
+		"effect": "none"
+	},
+	"Battle Axe":{
+		"nome" : "Battle Axe",
+		"mgt": 14,
+		"acc": 65,
+		"wgt":9,
+		"crit":0,
+		"effect":"none"
+	},
+	"Gauntlet":{
+		"nome" : "Gauntlet",
+		"mgt": 8,
+		"acc": 80,
+		"wgt":1,
+		"crit":0,
+		"effect":"none"
+	},
+	"Forest Axe":{
+		"nome" : "Forest Axe",
+		"mgt": 12,
+		"acc": 75,
+		"wgt":9,
+		"crit":5,
+		"effect":"none"
+	},
+	"Gorgon Sword":{
+		"nome" : "Gorgon Sword",
+		"mgt": 10,
+		"acc": 90,
+		"wgt":6,
+		"crit":5,
+		"effect":"poison"
+	},
+	"Lost Sword":{
+		"nome" : "Lost Sword",
+		"mgt": 13,
+		"acc": 90,
+		"wgt":8,
+		"crit":0,
+		"effect": "none"
+	},
+	"Spirit Rod":{
+		"nome" : "Spirit Rod",
+		"mgt": 16,
+		"acc": 40,
+		"wgt":8,
+		"crit":5,
+		"effect": "none"
+	},
+	"Ent Club":{
+		"nome" : "Ent Club",
+		"mgt": 16,
+		"acc": 60,
+		"wgt":15,
+		"crit":5,
+		"effect": "none"
+	},
+	"Watcher Spear":{
+		"nome" : "Ent Club",
+		"mgt": 11,
+		"acc": 80,
+		"wgt":10,
+		"crit":5,
+		"effect": "none"
+	},
+	"Relic Sword":{
+		"nome" : "Relic Sword",
+		"mgt": 14,
+		"acc": 100,
+		"wgt":10,
+		"crit":10,
+		"effect": "none"
+	},
+	"Silver Sword":{
+		"nome" : "Silver Sword",
+		"mgt": 10,
+		"acc": 100,
+		"wgt":7,
+		"crit":10,
+		"effect": "none"
+	},
+	"Stone Axe":{
+		"nome" : "Stone Axe",
+		"mgt": 18,
+		"acc": 55,
+		"wgt":16,
+		"crit":0,
+		"effect": "none"
+	},
+	"Ancient Staff":{
+		"nome" : "Ancient Staff",
+		"mgt": 18,
+		"acc": 25,
+		"wgt":8,
+		"crit":15,
+		"effect": "none"
+	},
+	"Geometry Staff":{
+		"nome" : "Geometry Staff",
+		"mgt": 15,
+		"acc": 60,
+		"wgt":12,
+		"crit":0,
+		"effect": "none"
 	}
 }
