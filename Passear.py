@@ -67,7 +67,9 @@ def Passear(jog,loc,step):
         if CT.upper() == "N":
             return 3
         else:
-            print("The big boss appears, {0} is in front of you.".format(loc["boss"]))
+            with open ("Chars.json") as chars:
+                    Char = json.load(chars)
+            print("The big boss of {1}, {0} is in front of you.".format(loc["boss"],loc["nome"]))
             time.sleep(3)
             btl.Begin(jog,Char[loc['boss']])
             return 4
