@@ -156,7 +156,7 @@ def Comando(Agnes,Borin):
     return Agnes,False
         
     
-def Begin(Agnes,Borin): 
+def Begin(Agnes,Borin):
     print("Suddenly, {} attacks you!".format(Borin["nome"]))
     time.sleep(2)
     Agnes["HP"] =Agnes["MHP"]
