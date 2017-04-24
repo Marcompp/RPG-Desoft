@@ -43,10 +43,12 @@ def Passear(jog,loc,step):
                 step += 1
                 return step
         else:
-            print("You walked for hours with nothing to show for.")
+            print("You walked for hours with nothing to show for it.")
             time.sleep(2)
+        if step == 0:
+            return step
         if step == 1:
-            print("There is still a long path ahead of you.\nYou walk forwards to your objective.")
+            print("There is still a long path ahead of you.\nYou walk forward towards your objective.")
             time.sleep(2)
             step = 1
             return step
