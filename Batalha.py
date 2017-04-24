@@ -159,7 +159,7 @@ def Comando(Agnes,Borin):
 def Begin(Agnes,Borin): 
     print("Suddenly, {} attacks you!".format(Borin["nome"]))
     time.sleep(2)
-    Agnes["HP"],result =Agnes["MHP"]
+    Agnes["HP"] =Agnes["MHP"]
     Agnes,escape = Comando(Agnes,Borin)
     if escape == True:
         return Agnes
