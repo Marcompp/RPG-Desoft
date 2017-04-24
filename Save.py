@@ -60,7 +60,7 @@ def LvlUp(P):
     P["xp"] = 0
     P["lvl"] += 1
     Stats = ["MHP","atk","skl","spd","lck","def"]
-    Growths = [80,30,40,35,50,25]
+    Growths = [80,35,40,35,50,25]
     for a in range(len(Stats)):
         count = rd.randint(0, 100)
         if count <= Growths[a]:
