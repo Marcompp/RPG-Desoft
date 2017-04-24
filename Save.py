@@ -79,3 +79,25 @@ def Escape(P):
         Boo = True
     return Boo
 
+def Promote():
+    Classes = ["Mage","Knight","Thief","Swordsman","Ruffian","Archer"]
+    with open("Player.json", "r") as plr:
+        Plr = json.load(plr)
+    if Plr["class"] in Classes:
+        if Plr["lvl"] >= 10:
+            t = input("Do you wish to promote to a new class?(Y or N) ")
+            if t.upper() == "Y":
+                Plr["class"] == Plr["promo"][1]
+                print("Você se tornou um {0}".format(Plr["Promo"][1]))
+                time.sleep(2)
+                Stats = ["MHP","atk","skl","spd","lck","def"]
+                b = 0
+                for a in range((Stats)):
+                    Plr[a] += Plr["bonus"][b]
+                    time.sleep(1)
+                    print("{0} went up by 1!".format((Stats[b],Plr["bonus"][b])))
+                    b +=1
+                SaveGameP(Plr)            
+    else:
+        print("You are already promoted")
+
