@@ -47,6 +47,14 @@
 		"crit":5,
 		"effect":"none"
 	},
+	"Iron Rod":{
+		"nome" : "Iron Rod",
+		"mgt":10,
+		"acc":70,
+		"wgt":4,
+		"crit":0,
+		"effect":"none"
+	},
 	"Slime Spear":{
 		"nome" : "Slime Spear",
 		"mgt":5,
