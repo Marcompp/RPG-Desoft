@@ -102,6 +102,7 @@ def Fight(Agnes,Borin):
 import time
 
 def Comando(Agnes,Borin):
+    Agnes["Weapon"] = Wpn[Agnes["Weapon"]]
     Borin["Weapon"] = Wpn[Borin["Weapon"]]
     while Agnes["HP"] > 0 and Borin["HP"] > 0:
         os.system("cls")#ClearScreen
