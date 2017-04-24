@@ -41,6 +41,9 @@ def Passar(loc):
     elif loc == "Caves of Light":
         print("After endless venturing through the mazelike caves, /nyou finally arrive at the exit to the Sundown Plateau.")
         time.sleep(3)
+        print("At the plateau, you find the small village of Bertunia.")
+        time.sleep(2)
+        Village()
         return "Sundown Plateau"
     elif loc == "Sundown Plateau":
         print("On the horizon you spot your next destination, Mt. Legory, and make your way there.")
@@ -53,6 +56,9 @@ def Passar(loc):
     elif loc == "Core Cavern":
         print("At the exit of the Cavern you find yourself at the Lost Swamp,/n a place few have ever escaped from.")
         time.sleep(3)
+        print("Next to swamp there lies Muggle Town, a small fishing village.")
+        time.sleep(2)
+        Village()
         return "Lost Swamp"
     elif loc == "Lost Swamp":
         print("Treading through the accursed swamp, you find your final destination,/n the Arcmat Ruins, said to be the birthplace of all magic.")
