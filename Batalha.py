@@ -11,9 +11,12 @@ import json
 
 with open ("Weapons.json") as wpns:
     Wpn = json.load(wpns)
+    
+with open ("Techs.json") as tec:
+    Tech = json.load(tec)
 
 def attack(A,B):
-    print("{} attacks!".format(A["nome"]))
+    print("{0} attacks with {1}!".format(A["nome"],A["Attack"]["nome"]))
     NHP = B["HP"]
     WeaponA = A["Attack"]
     attackA = A["atk"]+WeaponA["mgt"]-B["def"]
@@ -84,7 +87,7 @@ def Fight(Agnes,Borin):
     if clac == 0:
         Borin["Attack"] = Borin["Weapon"]
     else:
-        Borin["Attack"] = Borin["Techs"][clac-1]
+        Borin["Attack"] = Tech[Borin["Techs"][clac-1]]
     #who goes first
     tot = Agnes["lck"]+Borin["lck"]
     calc = (random.randint(1,tot) + random.randint(1,tot))/2 
@@ -132,7 +135,7 @@ def Comando(Agnes,Borin):
             elif move == "Attack":
                 Agnes["Attack"] = Agnes["Weapon"]
             else:
-                Agnes["Attack"] = Agnes["Techs"][move]
+                Agnes["Attack"] = Tech[Agnes["Techs"][move]]
             #calculo quem vai antes
             Fight(Agnes,Borin)
         if command == 2:
@@ -141,3 +144,10 @@ def Comando(Agnes,Borin):
         if command == 3:
             #fugir
             pass
+        
+    
+def Begin(Agnes,Borin): 
+    print("Suddenly, {} attacks you!".format(Borin["nome"]))
+    Agnes["HP"]=Agnes["MHP"]
+    Agnes = Comando(Agnes,Borin)
+    
