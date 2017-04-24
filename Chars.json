@@ -1,8 +1,8 @@
 {
 	"Mage":{
 		"class" : "Mage",
-		"promo" : ["Sorcerer","Explosion"]
-		"bonus" : [4,3,2,2,1,1]
+		"promo" : ["Sorcerer","Explosion"],
+		"bonus" : [4,3,2,2,1,1],
 		"lvl" : 1,
 		"MHP" : 26,
 		"HP" : 26,
@@ -17,8 +17,8 @@
 	},
 	"Knight":{
 		"class" : "Knight",
-		"promo" : ["Paladin","Shield Bash"]
-		"bonus" : [5,3,1,1,3,3]
+		"promo" : ["Paladin","Shield Bash"],
+		"bonus" : [5,3,1,1,3,3],
 		"lvl" : 1,
 		"MHP" : 32,
 		"HP" : 32,
@@ -33,8 +33,8 @@
 	},
 	"Swordsman":{
 		"class" : "Swordsman",
-		"promo" : ["Duelist","Clean Cut"]
-		"bonus" : [3,2,3,3,2,1]
+		"promo" : ["Duelist","Clean Cut"],
+		"bonus" : [3,2,3,3,2,1],
 		"lvl" : 1,
 		"MHP" : 28,
 		"HP" : 28,
@@ -49,8 +49,8 @@
 	},
 	"Thief":{
 		"class" : "Thief",
-		"promo" : ["Assassin","Assassinate"]
-		"bonus" : [2,2,3,3,3,1]
+		"promo" : ["Assassin","Assassinate"],
+		"bonus" : [2,2,3,3,3,1],
 		"lvl" : 1,
 		"MHP" : 30,
 		"HP" : 30,
@@ -65,8 +65,8 @@
 	},
 	"Archer":{
 		"class" : "Archer",
-		"promo" : ["Ranger","Deadeye"]
-		"bonus" : [3,2,3,2,3,2]
+		"promo" : ["Ranger","Deadeye"],
+		"bonus" : [3,2,3,2,3,2],
 		"lvl" : 1,
 		"MHP" : 27,
 		"HP" : 27,
@@ -81,8 +81,8 @@
 	},
 	"Ruffian":{
 		"class" : "Ruffian",
-		"bonus" : [4,3,1,2,2,1]
-		"promo" : ["Barbarian","Poison Spit"]
+		"bonus" : [4,3,1,2,2,1],
+		"promo" : ["Barbarian","Poison Spit"],
 		"lvl" : 1,
 		"MHP" : 36,
 		"HP" : 36,
