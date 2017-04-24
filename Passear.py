@@ -45,17 +45,17 @@ def Passear(jog,loc,step):
         else:
             print("You walked for hours with nothing to show for.")
             time.sleep(2)
-        if step == 0:
+        if step == 1:
             print("There is still a long path ahead of you.\nYou walk forwards to your objective.")
             time.sleep(2)
             step = 1
             return step
-        elif step == 1:
+        elif step == 2:
             print("You feel you are halfway there, you continue following the path at ease.")
             time.sleep(2)
             step = 2
             return step
-        elif step == 2:
+        elif step == 3:
             print("You can already see the next area, the exit is only a small journey away!!\nYou feel an evil presence watching you...")
             time.sleep(2)
             step = 3
@@ -72,4 +72,4 @@ def Passear(jog,loc,step):
     if step == 4:
         print("You see the exit right in front of you, so you carry on.")
         time.sleep(2)
-        
+        return 4
