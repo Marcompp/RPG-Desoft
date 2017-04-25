@@ -178,13 +178,6 @@ def Comando(Agnes,Borin):
                 action = input("")
             if action == "Potion":
                 sav.Heal(Agnes)
-                alatk=len(Borin["Techs"]) 
-                clac= random.randint(0,alatk)
-                if clac == 0:
-                    Borin["Attack"] = Borin["Wpn"]
-                else:
-                    Borin["Attack"] = Tech[Borin["Techs"][clac-1]]
-                attack(Borin,Agnes)
             if action == "Cancel":
                 break
         if command == 3:
@@ -197,13 +190,6 @@ def Comando(Agnes,Borin):
             else:
                 print("You failed to escape")
                 time.sleep(1)
-                alatk=len(Borin["Techs"]) 
-                clac= random.randint(0,alatk)
-                if clac == 0:
-                    Borin["Attack"] = Borin["Wpn"]
-                else:
-                    Borin["Attack"] = Tech[Borin["Techs"][clac-1]]
-                attack(Borin,Agnes)
             pass
     return Agnes,False
         
