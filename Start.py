@@ -84,7 +84,7 @@ while True:
     if command == 2:
         psa.Encount(player,location)
     if command == 3:
-        adventure = {"loc":location,"step":step}
+        adventure = {"loc":location["nome"],"step":step}
         with open ("Inventario.json") as inv:
             inventario = json.load(inv)
         sav.SaveAll(player,Bst,inventario,adventure)
