@@ -50,7 +50,7 @@ def StartOver():
     }
     Adv = {"loc" : "Apple Woods", "step" : 0}
     Best = {}
-    Inv = {Potion: {"quant" : 5}}
+    Inv = {"Potion": {"quant" : 5}}
     with open("Player.json", "w") as Arq:
         json.dump(Dic,Arq)
     with open("Adventure.json", "w") as Arq2:
