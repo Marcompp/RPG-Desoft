@@ -146,7 +146,7 @@ def Comando(Agnes,Borin):
                 print(n)
             command = input("")
             try:
-                command = int(input(""))
+                command = int(command))
             except ValueError:
                 command = "aaa"            
         if command == 1:
