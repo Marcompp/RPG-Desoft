@@ -28,10 +28,10 @@ def Village():
                 time.sleep(0.5)
                 print(z)
             command = (input(""))
-            if command == (""):
-                continue
-            else:
+            try:
                 command = int(command)
+            except ValueError:
+                command = "aaa"
         if command == 1:
             print("We are currently not open for business, but have these as a token of my gratitude for coming by.")
             time.sleep(2)
@@ -136,7 +136,7 @@ def Passear(jog,loc,step):
                     book = book.split( )
                     jog['Techs'].append(book[-1])
                     print("You learned {}!!!".format(book[-1]))
-                    time.sleep(2)
+                    time.sleep(3)
                     sav.SaveGameP(jog)
                 step += 1
                 return step

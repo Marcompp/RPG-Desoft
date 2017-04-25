@@ -55,7 +55,11 @@ def NewGame():
         for i in range(len(start)):
             time.sleep(1)
             print("{0}) {1}".format(i+1,start[i]))
-        sel = int(input(""))
+        sel = (input(""))
+        try:
+            sel = int(sel)
+        except ValueError:
+            sel = "aaa"  
     player = Char[start[sel-1]]
     player["nome"] = nom
     print("A {}? Fine!".format(player["class"]))

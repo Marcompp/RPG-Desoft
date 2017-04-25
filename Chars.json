@@ -381,7 +381,7 @@
 		"lck" : 15,
 		"def" : 0,
 		"Weapon" : "Fire Staff",
-		"Techs" : ["Fire,Ice"]
+		"Techs" : ["Fire","Ice"]
 	},		
 	"Wyvern":{
 		"nome" : "Wyvern",

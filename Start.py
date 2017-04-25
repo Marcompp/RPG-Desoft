@@ -32,7 +32,11 @@ else:
     print("What would you like to do?")
     print("1) Continue")
     print("2) Start New Game")
-    resp = int(input(""))
+    resp = input("")
+    try:
+        resp = int(resp)
+    except ValueError:
+        resp = "aaa"
     if resp == 2:
         print("Are you sure you want to delete your game?(Y/N)")
         resp = input("")
@@ -64,10 +68,10 @@ while True:
             time.sleep(0.5)
             print(n)
         command = (input(""))
-        if command==(""):
-            continue
-        else:
+        try:
             command = int(command)
+        except ValueError:
+            resp = "aaa"
     if command == 1:
         step = psa.Passear(player,location,step)
         location = location["nome"]
@@ -80,7 +84,7 @@ while True:
     if command == 2:
         psa.Encount(player,location)
     if command == 3:
-        adventure = {"loc":location,"step":step}
+        adventure = {"loc":location["nome"],"step":step}
         with open ("Inventario.json") as inv:
             inventario = json.load(inv)
         sav.SaveAll(player,Bst,inventario,adventure)
