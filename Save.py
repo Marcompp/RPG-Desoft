@@ -131,6 +131,8 @@ def Promote():
         else:
             print("Your level is not high enough...")
             print("You must level up {} more times.".format(10-Plr["lvl"]))
+            time.sleep(3)
     else:
         print("You are already promoted")
+        time.sleep(2)
 
