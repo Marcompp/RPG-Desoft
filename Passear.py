@@ -57,6 +57,9 @@ def Village():
                     btl.Begin(player,Char["Borin"])
                 elif rand == 2:
                     btl.Begin(player,Char["Lala"])
+                else:
+                    print("No one came...")
+                    time.sleep(1)
         elif command == 5:
             break
         
