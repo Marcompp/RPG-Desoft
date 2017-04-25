@@ -13,12 +13,12 @@ import Save as sav
 import Misc as msc
 
 def Village():
-    with open ("Chars.json") as chars:
-        Char = json.load(chars)
-    with open ("Player.json") as play:
-        player = json.load(play)
     TTD = ["1)Shop","2)Promote","3)Train","4)Challenge","5)Leave"]
     while True:
+        with open ("Chars.json") as chars:
+            Char = json.load(chars)
+        with open ("Player.json") as play:
+            player = json.load(play)
         command="aaaa"
         os.system("cls")#ClearScreen
         print('"Welcome to our village, take a look around and see if you anything interesting."')
