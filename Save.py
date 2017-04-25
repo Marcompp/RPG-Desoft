@@ -11,6 +11,8 @@ import time
 
 def Heal(jog):
     jog["HP"] += 20
+    print("Você curou 20 de vida!")
+    time.sleep(1.5)
     return jog
 
 def Inventario():
@@ -18,9 +20,11 @@ def Inventario():
         Inv = json.load(inv)
     if Inv["Potion"]["quant"] != 0:
         print("-Potion x{}".format(Inv["Potion"]["quant"]))
+        time.sleep(1.5)
         return True
     else:
         print("You have an empty inventory...")
+        time.sleep(1.5)
         return False
     
     
