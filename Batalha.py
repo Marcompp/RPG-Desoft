@@ -144,7 +144,11 @@ def Comando(Agnes,Borin):
             for n in options:
                 time.sleep(0.5)
                 print(n)
-            command = int(input(""))
+            command = input("")
+            try:
+                command = int(input(""))
+            except ValueError:
+                command = "aaa"            
         if command == 1:
             move = "lafgaag"
             attack = ["Attack"]
