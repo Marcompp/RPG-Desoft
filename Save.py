@@ -111,18 +111,22 @@ def Promote():
         if Plr["lvl"] >= 10:
             t = input("Do you wish to promote to a new class?(Y or N) ")
             if t.upper() == "Y":
-                Plr["class"] == Plr["promo"][1]
-                print("Você se tornou um {0}".format(Plr["Promo"][1]))
+                Plr["class"] = Plr["promo"][0]
+                print("You became a {0}!!!".format(Plr["promo"][0]))
                 time.sleep(2)
                 Stats = ["MHP","atk","skl","spd","lck","def"]
                 b = 0
-                for a in range((Stats)):
-                    Plr[a] += Plr["bonus"][b]
-                    time.sleep(1)
-                    print("{0} went up by 1!".format((Stats[b],Plr["bonus"][b])))
+                for a in Stats:
+                    gain = Plr["bonus"][b]
+                    Plr[a] += gain
+                    #print("{0} went up by {1}!".format((a,gain)))
                     b +=1
-                print("Você aprendeu {}!!!".format(Plr["promo"][2]))
-                Plr["Techs"][Plr["promo"][2]] = Plr["promo"][2]
+                    if b == 6:
+                        break
+                print("All your stats went up substantially!!")
+                print("You learned {}!!!".format(Plr["promo"][1]))
+                Plr["Techs"].append(Plr["promo"][1])
+                time.sleep(1)
                 SaveGameP(Plr)
         else:
             print("Your level is not high enough...")
