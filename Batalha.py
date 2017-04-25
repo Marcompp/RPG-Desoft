@@ -171,7 +171,16 @@ def Comando(Agnes,Borin):
             Agnes,Borin = Fight(Agnes,Borin)
         if command == 2:
             #inventorio
-            pass
+            action = "lafgaag"
+            while action not in ["Potion","Cancel"]:
+                sav.Inventario()
+                print("-Cancel")
+                action = input = ""
+            if action == "Potion":
+                Heal(Agnes)
+                attack(Borin,Agnes)
+            if action == "Cancel":
+                break
         if command == 3:
             #fugir
             escape = sav.Escape(Agnes)
