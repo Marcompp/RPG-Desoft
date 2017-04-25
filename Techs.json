@@ -31,11 +31,19 @@
 		"crit":0,
 		"effect":"none"
 	},
-	"Wind":{
-		"nome" : "Wind",
-		"mgt":8,
-		"acc":80,
+	"Earth":{
+		"nome" : "Earth",
+		"mgt":11,
+		"acc":50,
 		"wgt":6,
+		"crit":5,
+		"effect":"none"
+	},
+	"Water":{
+		"nome" : "Water",
+		"mgt":11,
+		"acc":70,
+		"wgt":9,
 		"crit":0,
 		"effect":"none"
 	},
