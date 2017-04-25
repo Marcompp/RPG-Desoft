@@ -14,8 +14,6 @@ def Heal(jog):
     return jog
 
 def Inventario():
-    with open("Itens.json","r") as its:
-        items = json.load(its)
     with open("Inventario.json","r") as inv:
         Inv = json.load(inv)
     if Inv["Potion"]["quant"] != 0:
@@ -82,7 +80,7 @@ def LvlUp(P):
     P["xp"] = 0
     P["lvl"] += 1
     Stats = ["MHP","atk","skl","spd","lck","def"]
-    Growths = [80,35,40,35,50,25]
+    Growths = [80,40,45,40,55,35]
     for a in range(len(Stats)):
         count = rd.randint(0, 100)
         if count <= Growths[a]:
@@ -119,7 +117,12 @@ def Promote():
                     time.sleep(1)
                     print("{0} went up by 1!".format((Stats[b],Plr["bonus"][b])))
                     b +=1
-                SaveGameP(Plr)            
+                print("Você aprendeu {}!!!".format(Plr["promo"][2]))
+                Plr["Techs"][Plr["Promo"][2]] = Plr["Promo"][2]
+                SaveGameP(Plr)
+        else:
+            print("Your level is not high enough...")
+            print("You must level up {} more times.".format(10-Plr["lvl"]))
     else:
         print("You are already promoted")
 
