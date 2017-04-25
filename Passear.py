@@ -135,6 +135,7 @@ def Passear(jog,loc,step):
                     book.split( )
                     jog[book[-1]] = book[-1]
                     print("You learned {}!!!".format(book[-1]))
+                    sav.SaveGameP(jog)
                 step += 1
                 return step
         else:
