@@ -12,23 +12,50 @@ import os
 import Save as sav
 
 def Village():
+    with open ("Chars.json") as chars:
+        Char = json.load(chars)
+    with open ("Player.json") as play:
+        player = json.load(play)
     print('"Welcome to our village, take a look around and see if you anything interesting."')
-    TTD = ["1)Shop","2)Promote","3)Leave"]
+    TTD = ["1)Shop","2)Promote","3)Train","4)Challenge","5)Leave"]
     while True:
         command="aaaa"
         os.system("cls")#ClearScreen
-        while command not in range(1,5):
+        while command not in range(1,6):
             print("What will you do?")
             for z in TTD:
                 time.sleep(0.5)
                 print(z)
-            command = int(input(""))
+            command = (input(""))
+            if command == (""):
+                continue
+            else:
+                command = int(command)
         if command == 1:
+            print("We are currently not open for business, but have these as a token of my gratitude for coming by.")
+            time.sleep(2)
+            print("You got 5 potions!!")
+            with open("Inventario.json","r") as inv:
+                Inv = json.load(inv)
+            Inv["Potion"]["quant"] += 5
+            sav.SaveGameI(Inv)
             pass
         elif command == 2:
             sav.Promote()
             pass
         elif command == 3:
+            btl.Begin(player,Char["Trainer"])
+        elif command == 4:
+            u = input("Are you sure? You're up for a great challenge.(Y or N) ")
+            if u.upper() == "Y":
+                rand = rd.randint(0,3)
+                if rand == 0:
+                    btl.Begin(player,Char["Agnes"])
+                elif rand == 1:
+                    btl.Begin(player,Char["Borin"])
+                elif rand == 2:
+                    btl.Begin(player,Char["Lala"])
+        elif command == 5:
             break
         
 
@@ -39,7 +66,7 @@ def Passar(loc):
         time.sleep(3)
         return "Caves of Light"
     elif loc == "Caves of Light":
-        print("After endless venturing through the mazelike caves, /nyou finally arrive at the exit to the Sundown Plateau.")
+        print("After endless venturing through the mazelike caves, \nyou finally arrive at the exit to the Sundown Plateau.")
         time.sleep(3)
         print("At the plateau, you find the small village of Bertunia.")
         time.sleep(2)
@@ -54,18 +81,18 @@ def Passar(loc):
         time.sleep(3)
         return "Core Cavern"
     elif loc == "Core Cavern":
-        print("At the exit of the Cavern you find yourself at the Lost Swamp,/n a place few have ever escaped from.")
+        print("At the exit of the Cavern you find yourself at the Lost Swamp,\n a place few have ever escaped from.")
         time.sleep(3)
         print("Next to swamp there lies Muggle Town, a small fishing village.")
         time.sleep(2)
         Village()
         return "Lost Swamp"
     elif loc == "Lost Swamp":
-        print("Treading through the accursed swamp, you find your final destination,/n the Arcmat Ruins, said to be the birthplace of all magic.")
+        print("Treading through the accursed swamp, you find your final destination,\n the Arcmat Ruins, said to be the birthplace of all magic.")
         time.sleep(3)
         return "Arcmat Ruins"
     elif loc == "Arcmat Ruins":
-        print("After finishing your epic quest,/n you decide to chill and kill monsters and let off some steam at the ARENA!!!")
+        print("After finishing your epic quest,\n you decide to chill and kill monsters and let off some steam at the ARENA!!!")
         time.sleep(3)
         return "The Arena"
         
