@@ -165,6 +165,7 @@ def Comando(Agnes,Borin):
                 print("-Cancel")
                 move = input("")
             if move == "Cancel":
+                command = "aaaa"
                 continue
             elif move == "Attack":
                 Agnes["Attack"] = Agnes["Wpn"]
@@ -187,7 +188,8 @@ def Comando(Agnes,Borin):
                 Inv["Potion"]["quant"] -=1
                 sav.SaveGameI(Inv)
             if action == "Cancel":
-                break
+                command = "aaaa"
+                continue
         if command == 3:
             #fugir
             escape = sav.Escape(Agnes)
