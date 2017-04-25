@@ -81,7 +81,9 @@ while True:
         psa.Encount(player,location)
     if command == 3:
         adventure = {"loc":location,"step":step}
-        sav.SaveAll(jogador,bestiario,inventario,adventure)
+        with open ("Inventario.json") as inv:
+            inventario = json.load(inv)
+        sav.SaveAll(player,Bst,inventario,adventure)
         break
     if command == 4:
         os.system("cls")
