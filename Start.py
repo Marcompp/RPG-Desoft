@@ -34,9 +34,9 @@ else:
     print("2) Start New Game")
     resp = int(input(""))
     if resp == 2:
-        print("Are yous sure you want to delete your game?(S/N)")
+        print("Are you sure you want to delete your game?(Y/N)")
         resp = input("")
-        if resp == "S":
+        if resp == "Y":
             sav.StartOver()
             player = misc.NewGame()
     
