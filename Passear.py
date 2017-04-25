@@ -135,7 +135,7 @@ def Passear(jog,loc,step):
                     book = book.split( )
                     jog['Techs'].append(book[-1])
                     print("You learned {}!!!".format(book[-1]))
-                    time.sleep(2)
+                    time.sleep(3)
                     sav.SaveGameP(jog)
                 step += 1
                 return step
