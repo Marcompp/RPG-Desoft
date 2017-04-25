@@ -178,6 +178,10 @@ def Comando(Agnes,Borin):
                 action = input("")
             if action == "Potion":
                 sav.Heal(Agnes)
+                with open("Inventario.json","r") as inv:
+                    Inv = json.load(inv)
+                Inv["Potion"]["quant"] -=1
+                sav.SaveGameI(Inv)
             if action == "Cancel":
                 break
         if command == 3:
