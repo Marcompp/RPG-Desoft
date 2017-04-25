@@ -36,6 +36,7 @@ def Village():
             print("We are currently not open for business, but have these as a token of my gratitude for coming by.")
             time.sleep(2)
             print("You got 5 potions!!")
+            time.sleep(2)
             with open("Inventario.json","r") as inv:
                 Inv = json.load(inv)
             Inv["Potion"]["quant"] += 5

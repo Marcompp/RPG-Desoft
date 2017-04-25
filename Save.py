@@ -124,9 +124,10 @@ def Promote():
                     if b == 6:
                         break
                 print("All your stats went up substantially!!")
+                time.sleep(1.5)
                 print("You learned {}!!!".format(Plr["promo"][1]))
                 Plr["Techs"].append(Plr["promo"][1])
-                time.sleep(1)
+                time.sleep(1.5)
                 SaveGameP(Plr)
         else:
             print("Your level is not high enough...")
