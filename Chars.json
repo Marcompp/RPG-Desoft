@@ -97,35 +97,38 @@
 	},
 	"Agnes":{
 		"nome" : "Agnes",
-		"lvl" : 1,
+		"lvl" : 30,
 		"HP" : 30,
 		"atk" : 20,
 		"skl" : 40,
 		"spd" : 50,
 		"lck" : 40,
 		"def" : 12,
+		"Weapon" : "Broadsword",
 		"Techs" : {}
 	},
 	"Borin":{
 		"nome" : "Borin",
-		"lvl" : 1,
+		"lvl" : 30,
 		"HP" : 40,
 		"atk" : 30,
 		"skl" : 20,
 		"spd" : 20,
 		"lck" : 20,
 		"def" : 22,
+		"Weapon" : "Poleaxe",
 		"Techs" : {}
 	},
 	"Lala":{
 		"nome" : "Lala",
-		"lvl" : 1,
+		"lvl" : 30,
 		"HP" : 15,
 		"atk" : 40,
 		"skl" : 50,
 		"spd" : 50,
 		"lck" : 30,
 		"def" : 30,
+		"Weapon" : "Elven Sword",
 		"Techs" : {}
 	},
 	"Slime":{
@@ -198,7 +201,7 @@
 		"lck" : 0,
 		"def" : 0,
 		"Weapon" : "Spirit Lance",
-		"Techs" : ["Dark"]
+		"Techs" : ["Darkness"]
 	},	
 		"Renegade":{
 		"nome" : "Renegade",
@@ -259,6 +262,18 @@
 		"def" : 2,
 		"Weapon" : "Bloody Claws",
 		"Techs" : ["Bite"]
+	},
+	"Trainer":{
+		"nome" : "Trainer",
+		"lvl" : 9,
+		"HP" : 40,
+		"atk" : 4,
+		"skl" : 3,
+		"spd" : 3,
+		"lck" : 0,
+		"def" : 2,
+		"Weapon" : "Iron Sword",
+		"Techs" : []
 	},
 	"Zombie":{
 		"nome" : "Zombie",
