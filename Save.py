@@ -122,7 +122,7 @@ def Promote():
                     print("{0} went up by 1!".format((Stats[b],Plr["bonus"][b])))
                     b +=1
                 print("Você aprendeu {}!!!".format(Plr["promo"][2]))
-                Plr["Techs"][Plr["Promo"][2]] = Plr["Promo"][2]
+                Plr["Techs"][Plr["promo"][2]] = Plr["promo"][2]
                 SaveGameP(Plr)
         else:
             print("Your level is not high enough...")
