@@ -9,6 +9,23 @@ import json
 import random as rd
 import time
 
+def Heal(jog):
+    jog["HP"] += 20
+    return jog
+
+def Inventario():
+    with open("Itens.json","r") as its:
+        items = json.load(its)
+    with open("Inventario.json","r") as inv:
+        Inv = json.load(inv)
+    if Inv["Potion"]["quant"] != 0:
+        print("-Potion x{}".format(Inv["Potion"]["quant"]))
+        return True
+    else:
+        print("You have an empty inventory...")
+        return False
+    
+    
 
 def SaveGameP(PD):
     PlayerData = PD
@@ -33,12 +50,15 @@ def StartOver():
     }
     Adv = {"loc" : "Apple Woods", "step" : 0}
     Best = {}
+    Inv = {Potion: {"quant" : 5}}
     with open("Player.json", "w") as Arq:
         json.dump(Dic,Arq)
     with open("Adventure.json", "w") as Arq2:
         json.dump(Adv,Arq2)
     with open("Beast.json", "w") as Arq3:
         json.dump(Best,Arq3)
+    with open("Inventario.json", "w") as Arq4:
+        json.dump(Inv,Arq4)
 
         
 def SaveAll(PD,BD,ID,AD):
@@ -77,6 +97,8 @@ def Escape(P):
     print("You try to escape!")
     if a<P["spd"]:
         Boo = True
+    else:
+        Boo = False
     return Boo
 
 def Promote():
