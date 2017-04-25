@@ -10,6 +10,7 @@ import Batalha as btl
 import json
 import os
 import Save as sav
+import Misc as msc
 
 def Village():
     with open ("Chars.json") as chars:
@@ -119,12 +120,21 @@ def Passear(jog,loc,step):
         if rand <= loc["encounter"]:
             Encount(jog,loc)
             step+=1
-        elif rand == loc['loot']:
+        elif rand != 10:#loc['loot']:
             a = input("You found a treasure chest, do you wish to open it?(Y ou N?) ")
             if a == 'Y':
-                randi = rd.randint(0, len[loc]['treasure']-1)
+                randi = rd.randint(0, len(loc['treasure'])-1)
                 print("You found {0}!".format(loc['treasure'][randi]))
+                with open("Weapons.json","r") as wps:
+                    Wps = json.load(wps)
                 time.sleep(1)
+                if loc['treasure'][randi] in Wps:
+                    msc.Equip(jog,Wps[loc['treasure'][randi]])
+                else:
+                    book = loc['treasure'][randi]
+                    book.split( )
+                    jog[book[-1]] = book[-1]
+                    print("You learned {}!!!".format(book[-1]))
                 step += 1
                 return step
         else:
