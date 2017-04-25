@@ -95,7 +95,7 @@ def Passar(loc):
     elif loc == "Arcmat Ruins":
         print("After finishing your epic quest,\n you decide to chill and kill monsters and let off some steam at the ARENA!!!")
         time.sleep(3)
-        return "The Arena"
+        return "Apple Woods"#"The Arena"
         
     
 with open ("Weapons.json") as wpns:
@@ -120,7 +120,7 @@ def Passear(jog,loc,step):
         if rand <= loc["encounter"]:
             Encount(jog,loc)
             step+=1
-        elif rand != 10:#loc['loot']:
+        elif rand == loc['loot']:
             a = input("You found a treasure chest, do you wish to open it?(Y ou N?) ")
             if a == 'Y':
                 randi = rd.randint(0, len(loc['treasure'])-1)
@@ -133,7 +133,7 @@ def Passear(jog,loc,step):
                 else:
                     book = loc['treasure'][randi]
                     book.split( )
-                    jog['Techs'][book[-1]] = book[-1]
+                    jog['Techs'].append(book[-1])
                     print("You learned {}!!!".format(book[-1]))
                     sav.SaveGameP(jog)
                 step += 1
