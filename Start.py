@@ -63,7 +63,11 @@ while True:
         for n in options:
             time.sleep(0.5)
             print(n)
-        command = int(input(""))
+        command = (input(""))
+        if command==(""):
+            continue
+        else:
+            command = int(command)
     if command == 1:
         step = psa.Passear(player,location,step)
         location = location["nome"]
