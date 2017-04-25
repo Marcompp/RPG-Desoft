@@ -201,7 +201,7 @@
 		"lck" : 0,
 		"def" : 0,
 		"Weapon" : "Spirit Lance",
-		"Techs" : ["Darkness"]
+		"Techs" : ["Dark"]
 	},	
 		"Renegade":{
 		"nome" : "Renegade",
