@@ -28,10 +28,10 @@ def Village():
                 time.sleep(0.5)
                 print(z)
             command = (input(""))
-            if command == (""):
-                continue
-            else:
+            try:
                 command = int(command)
+            except ValueError:
+                command = "aaa"
         if command == 1:
             print("We are currently not open for business, but have these as a token of my gratitude for coming by.")
             time.sleep(2)
