@@ -133,7 +133,7 @@ def Passear(jog,loc,step):
                 else:
                     book = loc['treasure'][randi]
                     book.split( )
-                    jog[book[-1]] = book[-1]
+                    jog['Techs'][book[-1]] = book[-1]
                     print("You learned {}!!!".format(book[-1]))
                     sav.SaveGameP(jog)
                 step += 1
