@@ -132,9 +132,10 @@ def Passear(jog,loc,step):
                     msc.Equip(jog,Wps[loc['treasure'][randi]])
                 else:
                     book = loc['treasure'][randi]
-                    book.split( )
+                    book = book.split( )
                     jog['Techs'].append(book[-1])
                     print("You learned {}!!!".format(book[-1]))
+                    time.sleep(2)
                     sav.SaveGameP(jog)
                 step += 1
                 return step
